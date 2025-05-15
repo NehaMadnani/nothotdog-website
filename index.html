@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NotHotDog - AI Agent Testing Tool | Test Your Chatbots & Voice Bots For Free</title>
+    <meta name="description" content="NotHotDog is a comprehensive AI agent testing tool that helps you build more reliable chatbots and voice bots. Start your free 14-day trial today, no credit card required.">
+    <meta name="keywords" content="AI agent testing tool, free chatbot testing tool, voice bot testing tool, AI testing platform, chatbot testing, AI agent reliability, enterprise AI testing">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="NotHotDog - AI Agent Testing Tool | Free Chatbot & Voice Bot Testing">
+    <meta property="og:description" content="Make your AI agents enterprise-ready with comprehensive testing. Free 14-day trial, no credit card required.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.nothotdog.dev">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="NotHotDog - AI Agent Testing Tool">
+    <meta name="twitter:description" content="Free chatbot & voice bot testing tool. Make your AI agents enterprise-ready.">
+    
+    <!-- Canonical URL -->
+    <meta rel="canonical" href="https://www.nothotdog.dev">
+    
+    <!-- Google Tag Manager -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FFX2S4LYL2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-FFX2S4LYL2');
+    </script>
+    <!-- End Google Tag Manager -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+    <style>
+        .bg-brand-orange {
+            background-color: #E9632F;
+        }
+        .text-brand-orange {
+            color: #E9632F;
+        }
+        .border-brand-orange {
+            border-color: #E9632F;
+        }
+        .bg-light-orange {
+            background-color: #FFF0E8;
+        }
+        /* Exciting gradient backgrounds */
+        .bg-gradient-orange {
+            background: linear-gradient(135deg, #FF5722 0%, #FF9800 100%);
+            box-shadow: 0 4px 15px rgba(255, 87, 34, 0.3);
+        }
+        .bg-gradient-light {
+            background: linear-gradient(135deg, #FFF0E8 0%, #FFF8E1 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .bg-gradient-light::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at top right, rgba(255, 152, 0, 0.1), transparent 70%);
+            pointer-events: none;
+        }
+        .bg-gradient-dark {
+            background: linear-gradient(135deg, #333 0%, #555 100%);
+            position: relative;
+        }
+        .bg-gradient-dark::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at bottom left, rgba(233, 99, 47, 0.2), transparent 70%);
+            pointer-events: none;
+        }
+        .bg-gradient-footer {
+            background: linear-gradient(135deg, #2D3748 0%, #1A202C 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .bg-gradient-footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at top right, rgba(255, 87, 34, 0.15), transparent 60%);
+            pointer-events: none;
+        }
+        .hotdog-icon {
+            max-width: 50px;
+        }
+        .hero-image {
+            border: 2px solid #e9632e;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .hero-image:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(233, 99, 47, 0.25);
+        }
+        
+        .bg-gradient {
+            background: linear-gradient(135deg, #FFF0E8 0%, #FFF 100%);
+        }
+        
+        .feature-card {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255, 152, 0, 0.05) 0%, rgba(255, 87, 34, 0.05) 100%);
+            z-index: -1;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(233, 99, 47, 0.15);
+            border-color: rgba(233, 99, 47, 0.3);
+        }
+        
+        .feature-card:hover::before {
+            background: linear-gradient(135deg, rgba(255, 152, 0, 0.1) 0%, rgba(255, 87, 34, 0.1) 100%);
+        }
+        
+        .testimoni-bubble {
+            position: relative;
+        }
+        .testimoni-bubble:after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 30px;
+            border-width: 15px 15px 0;
+            border-style: solid;
+            border-color: #FFF0E8 transparent;
+        }
+        /* Structured data for SEO */
+        .schema-data {
+            display: none;
+        }
+        
+        /* Text shadow for better readability on gradients */
+        .text-shadow {
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Animated gradient text */
+        .gradient-text {
+            background: linear-gradient(90deg, #FF5722, #FF9800, #E9632F, #FF5722);
+            background-size: 300% 100%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientMove 6s ease infinite;
+        }
+        
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        /* Fancy hover effects for buttons */
+        .btn-hover-effect {
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .btn-hover-effect::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(255, 255, 255, 0.2), transparent);
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+            z-index: -1;
+        }
+        
+        .btn-hover-effect:hover::after {
+            transform: translateY(0);
+        }
+        
+        /* Dark mode styles - enhanced with more vibrant effects */
+        .dark-mode {
+            background-color: #0F1116;
+            color: #f5f5f5;
+        }
+        .dark-mode .bg-white {
+            background-color: #1A1D25;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        }
+        .dark-mode .text-gray-800 {
+            color: #f5f5f5;
+        }
+        .dark-mode .text-gray-600, 
+        .dark-mode .text-gray-500 {
+            color: #aaaaaa;
+        }
+        .dark-mode .bg-gray-50 {
+            background-color: #1E212A;
+        }
+        .dark-mode .bg-light-orange {
+            background-color: rgba(0, 174, 239, 0.15);
+        }
+        .dark-mode .border-gray-200 {
+            border-color: #2A2E3A;
+        }
+        .dark-mode .bg-gradient {
+            background: linear-gradient(135deg, rgba(0, 174, 239, 0.15) 0%, #0F1116 100%);
+        }
+        .dark-mode .shadow-sm,
+        .dark-mode .shadow-lg {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        .dark-mode .testimoni-bubble:after {
+            border-color: rgba(0, 174, 239, 0.15) transparent;
+        }
+        /* Enhanced dark mode styles with vibrant gradients */
+        .dark-mode .bg-gradient-orange {
+            background: linear-gradient(135deg, #00AEEF 0%, #0063B0 100%);
+            box-shadow: 0 4px 15px rgba(0, 174, 239, 0.3);
+        }
+        .dark-mode .bg-gradient-light {
+            background: linear-gradient(135deg, rgba(0, 174, 239, 0.15) 0%, rgba(0, 99, 176, 0.05) 100%);
+            position: relative;
+        }
+        .dark-mode .bg-gradient-light::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at top right, rgba(0, 174, 239, 0.2), transparent 70%);
+            pointer-events: none;
+        }
+        .dark-mode .bg-gradient-dark {
+            background: linear-gradient(135deg, #151820 0%, #1E212A 100%);
+            position: relative;
+        }
+        .dark-mode .bg-gradient-dark::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at bottom left, rgba(0, 174, 239, 0.2), transparent 70%);
+            pointer-events: none;
+        }
+        .dark-mode .bg-gradient-footer {
+            background: linear-gradient(135deg, #0A0C10 0%, #151820 100%);
+            position: relative;
+        }
+        .dark-mode .bg-gradient-footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at top right, rgba(0, 174, 239, 0.15), transparent 60%);
+            pointer-events: none;
+        }
+        .dark-mode input, .dark-mode button {
+            background-color: #1A1D25;
+            color: #f5f5f5;
+            border-color: #2A2E3A;
+        }
+        .dark-mode input::placeholder {
+            color: #888;
+        }
+        /* Card glow effects in dark mode */
+        .dark-mode .feature-card {
+            border: 1px solid rgba(0, 174, 239, 0.2);
+            background: rgba(26, 29, 37, 0.8);
+            transition: all 0.3s ease;
+        }
+        .dark-mode .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 174, 239, 0.2);
+            border-color: rgba(0, 174, 239, 0.4);
+        }
+        
+        /* Neon effect for dark mode */
+        .dark-mode .neon-effect {
+            box-shadow: 0 0 5px rgba(0, 174, 239, 0.5),
+                        0 0 15px rgba(0, 174, 239, 0.3),
+                        0 0 30px rgba(0, 174, 239, 0.2);
+        }
+        
+        .dark-mode .hero-image {
+            border-color: #00AEEF;
+            box-shadow: 0 0 15px rgba(0, 174, 239, 0.4);
+        }
+        
+        .dark-mode .hero-image:hover {
+            box-shadow: 0 0 20px rgba(0, 174, 239, 0.6),
+                        0 0 40px rgba(0, 174, 239, 0.3);
+        }
+        
+        /* Gradient text in dark mode */
+        .dark-mode .gradient-text {
+            background: linear-gradient(90deg, #00AEEF, #0063B0, #00C2FF, #00AEEF);
+            background-size: 300% 100%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientMove 6s ease infinite;
+        }
+        
+        /* Text color overrides for dark mode - keeping orange branding */
+        .dark-mode .text-brand-orange {
+            color: #FF5722;
+        }
+        
+        .dark-mode .border-brand-orange {
+            border-color: #FF5722;
+        }
+        
+        /* Improved readability styles for light mode */
+        .text-gray-600 {
+            color: #4B5563; /* Darker gray for better contrast */
+        }
+        
+        .text-gray-500 {
+            color: #374151; /* Darker gray for better contrast */
+        }
+        
+        p {
+            line-height: 1.7; /* Improved line height for better readability */
+            letter-spacing: 0.01em; /* Slight letter spacing for better readability */
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            letter-spacing: -0.02em; /* Tighter letter spacing for headings */
+        }
+        
+        /* High contrast text for important elements */
+        .feature-card h3 {
+            color: #111827; /* Very dark gray for headings */
+        }
+        
+        .dark-mode .feature-card h3 {
+            color: #F9FAFB; /* Very light color for headings in dark mode */
+        }
+        
+        /* Improved form readability */
+        input, button {
+            font-size: 1rem; /* Standardized font size */
+        }
+        
+        input::placeholder {
+            color: #6B7280; /* Darker placeholder text */
+        }
+        
+        /* Contrast improvements for buttons */
+        .bg-brand-orange, .bg-gradient-orange {
+            color: white; /* Ensuring white text on orange backgrounds */
+            font-weight: 500; /* Slightly bolder text */
+        }
+        .feature-card {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255, 152, 0, 0.05) 0%, rgba(255, 87, 34, 0.05) 100%);
+            z-index: -1;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(233, 99, 47, 0.15);
+            border-color: rgba(233, 99, 47, 0.3);
+        }
+        
+        .feature-card:hover::before {
+            background: linear-gradient(135deg, rgba(255, 152, 0, 0.1) 0%, rgba(255, 87, 34, 0.1) 100%);
+        }
+        .testimoni-bubble {
+            position: relative;
+        }
+        .testimoni-bubble:after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 30px;
+            border-width: 15px 15px 0;
+            border-style: solid;
+            border-color: #FFF0E8 transparent;
+        }
+        /* Structured data for SEO */
+        .schema-data {
+            display: none;
+        }
+            /* Dark mode styles - enhanced with black-orange-white gradients */
+        .dark-mode {
+            background-color: #121212;
+            color: #f5f5f5;
+        }
+
+        .dark-mode .bg-white {
+            background-color: #1E1E1E;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .dark-mode .text-gray-800 {
+            color: #f5f5f5;
+        }
+
+        .dark-mode .text-gray-600, 
+        .dark-mode .text-gray-500 {
+            color: #aaaaaa;
+        }
+
+        .dark-mode .bg-gray-50 {
+            background-color: #1E1E1E;
+        }
+
+        .dark-mode .bg-light-orange {
+            background-color: rgba(233, 99, 47, 0.15);
+        }
+
+        .dark-mode .border-gray-200 {
+            border-color: #2A2A2A;
+        }
+
+        /* Improved gradient backgrounds for dark mode */
+        .dark-mode .bg-gradient {
+            background: linear-gradient(135deg, rgba(233, 99, 47, 0.2) 0%, #121212 100%);
+        }
+
+        .dark-mode .bg-gradient-orange {
+            background: linear-gradient(135deg, #FF5722 0%, #B71C1C 100%);
+            box-shadow: 0 4px 15px rgba(255, 87, 34, 0.3);
+        }
+
+        .dark-mode .bg-gradient-light {
+            background: linear-gradient(135deg, #1A1A1A 0%, #121212 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .dark-mode .bg-gradient-light::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at top right, rgba(255, 87, 34, 0.2), transparent 70%);
+            pointer-events: none;
+        }
+
+        .dark-mode .bg-gradient-dark {
+            background: linear-gradient(135deg, #151515 0%, #1A1A1A 100%);
+            position: relative;
+        }
+
+        .dark-mode .bg-gradient-dark::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at bottom left, rgba(255, 87, 34, 0.2), transparent 70%);
+            pointer-events: none;
+        }
+
+        .dark-mode .bg-gradient-footer {
+            background: linear-gradient(135deg, #0F0F0F 0%, #1A1A1A 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .dark-mode .bg-gradient-footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at top right, rgba(255, 87, 34, 0.15), transparent 60%);
+            pointer-events: none;
+        }
+
+/* Form and input styling for dark mode */
+        .dark-mode input, .dark-mode button {
+            background-color: #252525;
+            color: #f5f5f5;
+            border-color: #333333;
+        }
+
+        .dark-mode input::placeholder {
+            color: #888888;
+        }
+
+        /* Card styling for dark mode with orange accents */
+        .dark-mode .feature-card {
+            border: 1px solid rgba(233, 99, 47, 0.2);
+            background: rgba(30, 30, 30, 0.8);
+            transition: all 0.3s ease;
+        }
+
+        .dark-mode .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(233, 99, 47, 0.2);
+            border-color: rgba(233, 99, 47, 0.4);
+        }
+
+        .dark-mode .feature-card::before {
+            background: linear-gradient(135deg, rgba(255, 87, 34, 0.05) 0%, rgba(0, 0, 0, 0.1) 100%);
+        }
+
+        .dark-mode .feature-card:hover::before {
+            background: linear-gradient(135deg, rgba(255, 87, 34, 0.1) 0%, rgba(0, 0, 0, 0.05) 100%);
+        }
+
+        /* Glow effects for dark mode */
+        .dark-mode .glow-effect {
+            box-shadow: 0 0 10px rgba(255, 87, 34, 0.3),
+                        0 0 20px rgba(255, 87, 34, 0.2),
+                        0 0 30px rgba(255, 87, 34, 0.1);
+        }
+
+        .dark-mode .hero-image {
+            border-color: #E9632F;
+            box-shadow: 0 0 15px rgba(233, 99, 47, 0.4);
+        }
+
+        .dark-mode .hero-image:hover {
+            box-shadow: 0 0 20px rgba(233, 99, 47, 0.6),
+                        0 0 40px rgba(233, 99, 47, 0.3);
+        }
+
+        /* Gradient text in dark mode */
+        .dark-mode .gradient-text {
+            background: linear-gradient(90deg, #FF5722, #FF9800, #E9632F, #FF5722);
+            background-size: 300% 100%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientMove 6s ease infinite;
+        }
+
+        /* Signup form in dark mode */
+        .dark-mode .signup-form {
+            background: rgba(30, 30, 30, 0.9);
+        }
+
+        .dark-mode .signup-form::before {
+            border: 1px solid rgba(233, 99, 47, 0.3);
+            box-shadow: 0 8px 20px rgba(233, 99, 47, 0.1);
+        }
+
+        .dark-mode .signup-form input {
+            background-color: rgba(40, 40, 40, 0.9);
+            color: #f5f5f5;
+            border-color: rgba(233, 99, 47, 0.5);
+        }
+
+        .dark-mode .signup-form input:focus {
+            border-color: #FF5722;
+            box-shadow: 0 0 0 2px rgba(233, 99, 47, 0.3);
+        }
+
+        .dark-mode .signup-form button {
+            background: linear-gradient(135deg, #FF5722 0%, #B71C1C 100%);
+        }
+
+        /* CTA section improved gradients for dark mode */
+        .dark-mode .cta-section .absolute:first-child {
+            background: linear-gradient(135deg, #1A1A1A 0%, #0F0F0F 100%);
+        }
+
+        .dark-mode .cta-section .absolute:nth-child(2) {
+            background: radial-gradient(circle at top right, rgba(255, 87, 34, 0.4), transparent 70%);
+        }
+
+        .dark-mode .testimoni-bubble:after {
+            border-color: rgba(233, 99, 47, 0.15) transparent;
+        }
+
+        /* Improved dark mode toggle button */
+        .dark-mode .mode-toggle {
+            background: rgba(30, 30, 30, 0.7);
+            box-shadow: 0 2px 10px rgba(233, 99, 47, 0.2);
+        }
+
+        /* Add subtle texture to dark mode backgrounds */
+        .dark-mode .texture-overlay {
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23e9632f' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.5;
+            pointer-events: none;
+            z-index: -1;
+        }
+        /* Toggle button styles */
+        .mode-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .dark-mode .mode-toggle {
+            background: rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Sign up form styles with improved aesthetics */
+        .signup-form {
+            display: none;
+            margin-top: 1rem;
+            width: inherit;
+            position: relative;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 0.5rem;
+            backdrop-filter: blur(5px);
+            animation: formAppear 0.3s ease-out;
+        }
+        
+        @keyframes formAppear {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .signup-form::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 0.5rem;
+            border: 1px solid rgba(233, 99, 47, 0.3);
+            box-shadow: 0 8px 20px rgba(233, 99, 47, 0.15);
+            pointer-events: none;
+        }
+        
+        .signup-form input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid #E9632F;
+            border-radius: 0.375rem;
+            margin-bottom: 0.75rem;
+            background-color: rgba(255, 255, 255, 0.9);
+            transition: all 0.3s ease;
+        }
+        
+        .signup-form input:focus {
+            outline: none;
+            border-color: #FF5722;
+            box-shadow: 0 0 0 2px rgba(255, 87, 34, 0.2);
+        }
+        
+        .signup-form button {
+            width: 100%;
+            padding: 0.75rem;
+            background: linear-gradient(135deg, #FF5722 0%, #FF9800 100%);
+            color: white;
+            border: none;
+            border-radius: 0.375rem;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .signup-form button::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.2) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .signup-form button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(255, 87, 34, 0.3);
+        }
+        
+        .signup-form button:hover::after {
+            opacity: 1;
+        }
+        
+        .dark-mode .signup-form {
+            background: rgba(26, 29, 37, 0.8);
+        }
+        
+        .dark-mode .signup-form::before {
+            border: 1px solid rgba(233, 99, 47, 0.3);
+            box-shadow: 0 8px 20px rgba(233, 99, 47, 0.1);
+        }
+        
+        .dark-mode .signup-form input {
+            background-color: rgba(30, 33, 42, 0.9);
+            color: #f5f5f5;
+            border-color: rgba(233, 99, 47, 0.5);
+        }
+        
+        .dark-mode .signup-form input:focus {
+            border-color: #FF5722;
+            box-shadow: 0 0 0 2px rgba(233, 99, 47, 0.3);
+        }
+        
+        .dark-mode .signup-form button {
+            background: linear-gradient(135deg, #FF5722 0%, #B71C1C 100%);
+        }
+    </style>
+        
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "NotHotDog",
+      "description": "AI Agent Testing Tool for chatbots and voice bots. Free trial available.",
+      "applicationCategory": "Testing Tool",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "5",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "22"
+      }
+    }
+    </script>
+        
+    <script>
+    // Theme toggle functionality without localStorage
+    document.addEventListener('DOMContentLoaded', function() {
+        // Add theme toggle button
+        const toggleButton = document.createElement('button');
+        toggleButton.className = 'mode-toggle';
+        toggleButton.innerHTML = '<i class="fas fa-moon text-gray-700"></i>';
+        document.body.appendChild(toggleButton);
+        
+        // Toggle theme on button click
+        toggleButton.addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            const isDark = document.body.classList.contains('dark-mode');
+            this.innerHTML = isDark ? 
+                '<i class="fas fa-sun text-yellow-400"></i>' : 
+                '<i class="fas fa-moon text-gray-700"></i>';
+        });
+        
+        // Toggle signup form visibility
+        const toggleSignupForm = function(formId) {
+            const form = document.getElementById(formId);
+            if (form) {
+                if (form.style.display === 'block') {
+                    form.style.display = 'none';
+                } else {
+                    form.style.display = 'block';
+                }
+            }
+        };
+        
+        // Find all signup buttons and attach click handlers
+        const signupButtons = document.querySelectorAll('.signup-toggle');
+        signupButtons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                const formId = this.getAttribute('data-form');
+                toggleSignupForm(formId);
+            });
+        });
+        
+        // Handle form submissions
+        const submitForms = document.querySelectorAll('.signup-form');
+        submitForms.forEach(form => {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = this.querySelector('input[type="email"]').value;
+                if (!email || !email.includes('@')) {
+                    alert('Please enter a valid email address');
+                    return;
+                }
+                
+                const googleFormURL = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSd-Ap9oxoIjCMRJE3kKHa4RCmAWeJeVqQOG8-AQkYKFSc3egg/formResponse";
+                const formParams = new URLSearchParams({
+                    "entry.1433578333": email,
+                });
+                
+                fetch(googleFormURL, {
+                    method: "POST",
+                    mode: "no-cors",
+                    headers: {
+                        "Content-Type": "application/x-www-form-urlencoded",
+                    },
+                    body: formParams.toString(),
+                })
+                .then(() => {
+                    alert("Thank you! We'll be in touch shortly.");
+                    this.reset();
+                    this.style.display = 'none';
+                })
+                .catch(() => {
+                    alert("An error occurred. Please try again.");
+                });
+            });
+        });
+        
+        // Legacy window.submitToGoogleForms function for backward compatibility
+        window.submitToGoogleForms = function(email) {
+            if (!email || !email.includes('@')) {
+                alert('Please enter a valid email address');
+                return false;
+            }
+            
+            const googleFormURL = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSd-Ap9oxoIjCMRJE3kKHa4RCmAWeJeVqQOG8-AQkYKFSc3egg/formResponse";
+            const formParams = new URLSearchParams({
+                "entry.1433578333": email,
+            });
+            
+            fetch(googleFormURL, {
+                method: "POST",
+                mode: "no-cors",
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                },
+                body: formParams.toString(),
+            })
+            .then(() => {
+                alert("Thank you! We'll be in touch shortly.");
+                return true;
+            })
+            .catch(() => {
+                alert("An error occurred. Please try again.");
+                return false;
+            });
+            
+            return true;
+        };
+    });
+    </script>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-sm py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="nothotdog.png" alt="NotHotDog Logo" class="hotdog-icon">
+                <span class="text-2xl font-bold text-brand-orange">NotHotDog</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#how-it-works" class="hover:text-brand-orange">How It Works</a>
+                <a href="#features" class="hover:text-brand-orange">Features</a>
+                <a href="#pricing" class="hover:text-brand-orange">Pricing</a>
+                <a href="#customers" class="hover:text-brand-orange">Customers</a>
+            </div>
+            <div class="flex space-x-4">
+                <a href="https://calendly.com/neha-suresh" class="px-4 py-2 border border-brand-orange text-brand-orange rounded hover:bg-brand-orange hover:text-white transition duration-300">Contact Us</a>
+                <a href="#" class="signup-toggle px-4 py-2 bg-gradient-orange text-white rounded hover:bg-opacity-90 transition duration-300" data-form="nav-signup-form">Start Free Trial</a>
+            </div>
+        </div>
+        <!-- Navigation Bar Signup Form -->
+        <div class="container mx-auto px-4 mt-2">
+            <form id="nav-signup-form" class="signup-form">
+                <input type="email" placeholder="Enter your email to get started" required>
+                <button type="submit">Start Free Trial</button>
+            </form>
+        </div>
+    </nav>
+
+    <!-- Hero Section with enhanced visuals -->
+    <section class="bg-gradient-light py-16 md:py-24 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-full h-full opacity-20 pointer-events-none">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                <path fill="#FF5722" d="M44.7,-76.4C58.8,-69.2,71.8,-59.1,79.6,-45.8C87.4,-32.6,90,-16.3,88.5,-1.5C87,13.3,81.4,26.6,73.6,38.6C65.9,50.6,56,61.3,43.5,67.6C31,73.9,15.5,75.8,0.4,75.1C-14.8,74.4,-29.5,71.2,-41.9,64.5C-54.3,57.8,-64.3,47.6,-72.6,35.3C-80.9,22.9,-87.5,8.4,-87.7,-6.2C-87.9,-20.8,-81.7,-35.5,-71.9,-46.9C-62.2,-58.3,-48.9,-66.4,-35.4,-74C-21.8,-81.6,-7.9,-88.8,4.9,-87.3C17.7,-85.8,30.5,-83.6,44.7,-76.4Z" transform="translate(100 100)" />
+            </svg>
+        </div>
+        
+        <div class="absolute bottom-0 left-0 w-full h-full opacity-10 pointer-events-none">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                <path fill="#FF9800" d="M47.7,-73.2C60.8,-66.3,70.2,-51.5,74.1,-36.4C78,-21.2,76.3,-5.9,72.4,7.5C68.4,20.8,62.3,32.2,53.6,42.6C44.9,53,33.7,62.6,20.4,67.9C7.1,73.3,-8.2,74.4,-22,70.8C-35.9,67.1,-48.3,58.6,-57.9,47.4C-67.5,36.2,-74.3,22.2,-77.8,6.8C-81.3,-8.7,-81.5,-25.8,-74.8,-39.9C-68.1,-54,-54.3,-65.2,-39.9,-70.6C-25.4,-76,-12.7,-75.6,1.8,-78.7C16.3,-81.7,34.5,-80.1,47.7,-73.2Z" transform="translate(100 100)" />
+            </svg>
+        </div>
+        
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center relative z-10">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                    <span class="bg-clip-text bg-gradient-to-r from-orange-500 to-red-600">AI Agent Testing</span> Made Simple
+                </h1>
+                <p class="text-xl mb-8 text-gray-600">
+                    NotHotDog generates comprehensive suite of scenarios, and helps you run experiments on your agents in no time. Ship fast with confidence!
+
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#" class="signup-toggle px-6 py-3 bg-gradient-orange text-white font-medium rounded-lg text-center hover:bg-opacity-90 transition duration-300 relative overflow-hidden group" data-form="hero-signup-form">
+                        <span class="relative z-10">Start 14-Day Free Trial</span>
+                        <span class="absolute inset-0 bg-gradient-to-r from-yellow-400 to-orange-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                    </a>
+                    <a href="https://docsend.com/view/fa3i8mipzr9fq566" class="px-6 py-3 border border-brand-orange text-brand-orange font-medium rounded-lg flex items-center justify-center hover:bg-light-orange transition duration-300 relative overflow-hidden group">
+                        <span class="absolute inset-0 bg-gradient-to-r from-orange-100 to-orange-200 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                        <i class="fas fa-play-circle mr-2 relative z-10"></i>
+                        <span class="relative z-10">Watch Demo</span>
+                    </a>
+                </div>
+                <!-- Hero Signup Form -->
+                <form id="hero-signup-form" class="signup-form mt-4">
+                    <input type="email" placeholder="Enter your email to get started" required>
+                    <button type="submit">Start Free Trial</button>
+                </form>
+                <p class="mt-4 text-sm text-gray-500">No credit card required. 30-day money back guarantee.</p>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative">
+                    <div class="absolute -inset-0.5 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-lg blur opacity-50"></div>
+                    <img src="screenshot.png" alt="AI Agent Testing Platform" class="hero-image rounded-lg shadow-lg relative">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured For Section -->
+    <section class="py-12 bg-gradient-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold text-center mb-8">Featured AI Agent Testing Tool For</h2>
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+                <!-- Chatbot Testing -->
+                <div class="flex flex-col items-center">
+                    <div class="bg-light-orange p-3 rounded-full mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-brand-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                        </svg>
+                    </div>
+                    <span class="text-sm font-medium">Chatbot Testing</span>
+                </div>
+                
+                <!-- Voice Bot Testing -->
+                <div class="flex flex-col items-center">
+                    <div class="bg-light-orange p-3 rounded-full mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-brand-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+                        </svg>
+                    </div>
+                    <span class="text-sm font-medium">Voice Bot Testing</span>
+                </div>
+                
+                <!-- Customer Support AI -->
+                <div class="flex flex-col items-center">
+                    <div class="bg-light-orange p-3 rounded-full mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-brand-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                        </svg>
+                    </div>
+                    <span class="text-sm font-medium">Customer Support AI</span>
+                </div>
+                
+                <!-- Sales AI Agents -->
+                <div class="flex flex-col items-center">
+                    <div class="bg-light-orange p-3 rounded-full mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-brand-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    </div>
+                    <span class="text-sm font-medium">Sales AI Agents</span>
+                </div>
+                
+                <!-- Multilingual Bots -->
+                <div class="flex flex-col items-center">
+                    <div class="bg-light-orange p-3 rounded-full mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-brand-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+                        </svg>
+                    </div>
+                    <span class="text-sm font-medium">Multilingual Bots</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Statement -->
+    <section class="py-16 bg-white" id="how-it-works">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Why AI Agents Are Not Enterprise-Ready</h2>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="bg-gradient-light p-8 rounded-lg hover:shadow-lg transition duration-300">
+                    <div class="text-brand-orange text-3xl font-bold mb-4">90%</div>
+                    <h3 class="text-xl font-semibold mb-4">Manual Testing</h3>
+                    <p class="text-gray-600">Companies test complex AI agents with basic prompts, missing edge cases and critical failures.</p>
+                </div>
+                <div class="bg-gradient-light p-8 rounded-lg hover:shadow-lg transition duration-300">
+                    <div class="text-brand-orange text-3xl font-bold mb-4">Limited</div>
+                    <h3 class="text-xl font-semibold mb-4">Evaluation Methods</h3>
+                    <p class="text-gray-600">No systematic way to evaluate agent behavior or simulate real user interactions at scale.</p>
+                </div>
+                <div class="bg-gradient-light p-8 rounded-lg hover:shadow-lg transition duration-300">
+                    <div class="text-brand-orange text-3xl font-bold mb-4">Unknown</div>
+                    <h3 class="text-xl font-semibold mb-4">Compliance & Security Risks</h3>
+                    <p class="text-gray-600">Edge cases are discovered only after deployment, leading to customer frustration and potential liability.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-16 bg-gradient-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Why Choose NotHotDog</h2>
+            <p class="text-center text-gray-600 mb-16 max-w-2xl mx-auto">Our free AI agent testing tool makes comprehensive testing simple and scalable for both chatbots and voice bots.</p>
+            
+            <div class="grid md:grid-cols-3 gap-16">
+                <div class="text-center">
+                    <div class="w-20 h-20 mx-auto mb-6 bg-gradient-orange rounded-full flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-orange-500 to-red-600 opacity-90"></div>
+                        <div class="absolute inset-0 bg-gradient-to-tl from-transparent to-yellow-400 opacity-40"></div>
+                        <i class="fas fa-users text-white text-2xl relative z-10"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">1. Test Voice & Chat Bots</h3>
+                    <p class="text-gray-600">Our free AI testing tool works with both text-based chatbots and voice-based agents to ensure comprehensive coverage.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-20 h-20 mx-auto mb-6 bg-gradient-orange rounded-full flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-orange-500 to-red-600 opacity-90"></div>
+                        <div class="absolute inset-0 bg-gradient-to-tl from-transparent to-yellow-400 opacity-40"></div>
+                        <i class="fas fa-sitemap text-white text-2xl relative z-10"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">2. Run 100+ Parallel Scenarios</h3>
+                    <p class="text-gray-600">Test with hundreds of unique scenarios in parallel conversations, discovering edge cases before deployment.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-20 h-20 mx-auto mb-6 bg-gradient-orange rounded-full flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-orange-500 to-red-600 opacity-90"></div>
+                        <div class="absolute inset-0 bg-gradient-to-tl from-transparent to-yellow-400 opacity-40"></div>
+                        <i class="fas fa-chart-line text-white text-2xl relative z-10"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">3. Get Actionable Metrics</h3>
+                    <p class="text-gray-600">Track agent performance with metrics like response time, accuracy, and failure rates to guide improvements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-white" id="features">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Key Features</h2>
+            <p class="text-center text-gray-600 mb-16 max-w-2xl mx-auto">Everything you need to make your AI agents enterprise-ready.</p>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="feature-card p-6 border border-gray-200 rounded-lg">
+                    <div class="w-12 h-12 mb-4 bg-gradient-light rounded-lg flex items-center justify-center">
+                        <i class="fas fa-bolt text-brand-orange"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">3X Faster Releases</h3>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-brand-orange mt-1 mr-2"></i>
+                            <span>Quick one-time setup</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-brand-orange mt-1 mr-2"></i>
+                            <span>Automated testing with every update</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-brand-orange mt-1 mr-2"></i>
+                            <span>Works with both text and audio based agents</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card p-6 border border-gray-200 rounded-lg">
+                    <div class="w-12 h-12 mb-4 bg-gradient-light rounded-lg flex items-center justify-center">
+                        <i class="fas fa-shield-alt text-brand-orange"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">80% Higher Reliability</h3>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-brand-orange mt-1 mr-2"></i>
+                            <span>Test with 20+ diverse personas</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-brand-orange mt-1 mr-2"></i>
+                            <span>Test with 100+ scenarios in parallel</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-brand-orange mt-1 mr-2"></i>
+                            <span>Create custom scenarios in natural language</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card p-6 border border-gray-200 rounded-lg">
+                    <div class="w-12 h-12 mb-4 bg-gradient-light rounded-lg flex items-center justify-center">
+                        <i class="fas fa-chart-bar text-brand-orange"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Comprehensive Metrics</h3>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-brand-orange mt-1 mr-2"></i>
+                            <span>Instant issue detection</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-brand-orange mt-1 mr-2"></i>
+                            <span>Real-time performance tracking</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-brand-orange mt-1 mr-2"></i>
+                            <span>Custom success metrics for your agents</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-16 bg-gradient-light" id="pricing">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Simple, Transparent Pricing</h2>
+            <p class="text-center text-gray-600 mb-16 max-w-2xl mx-auto">Start with a 14-day free trial. No credit card required. 30-day money-back guarantee.</p>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="border border-gray-200 rounded-lg p-8 hover:shadow-lg transition duration-300 bg-white">
+                    <h3 class="text-xl font-bold mb-2">Individual</h3>
+                    <div class="text-4xl font-bold mb-6">$0<span class="text-gray-500 text-lg font-normal">/month</span></div>
+                    
+                    <ul class="mb-8 space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-brand-orange mt-1 mr-2"></i>
+                            <span>Bring your own tokens</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-brand-orange mt-1 mr-2"></i>
+                            <span>200 evaluations per month</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-brand-orange mt-1 mr-2"></i>
+                            <span>1 seat</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span><br/></span>
+                        </li>
+                    </ul>
+                    
+                    <a href="#" class="signup-toggle block text-center py-3 px-4 bg-gradient-orange text-white rounded-lg hover:bg-opacity-90 transition duration-300" data-form="individual-signup-form">Start Free Trial</a>
+                    
+                    <form id="individual-signup-form" class="signup-form mt-4">
+                        <input type="email" placeholder="Enter your email to get started" required>
+                        <button type="submit">Start Free Trial</button>
+                    </form>
+                </div>
+                
+                <div class="border-2 border-brand-orange rounded-lg p-8 shadow-lg relative bg-white">
+                    <div class="absolute top-0 right-0 bg-gradient-orange text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">MOST POPULAR</div>
+                    <h3 class="text-xl font-bold mb-2">Standard</h3>
+                    <div class="text-4xl font-bold mb-6">$249<span class="text-gray-500 text-lg font-normal">/month</span></div>
+                    
+                    <ul class="mb-8 space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-brand-orange mt-1 mr-2"></i>
+                            <span>Includes AI tokens</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-brand-orange mt-1 mr-2"></i>
+                            <span>1200 evaluations per month</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-brand-orange mt-1 mr-2"></i>
+                            <span>Multiple Personas</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-brand-orange mt-1 mr-2"></i>
+                            <span>5 seats</span>
+                        </li>
+                    </ul>
+                    
+                    <a href="#" class="signup-toggle block text-center py-3 px-4 bg-gradient-orange text-white rounded-lg hover:bg-opacity-90 transition duration-300" data-form="standard-signup-form">Start Free Trial</a>
+                    
+                    <form id="standard-signup-form" class="signup-form mt-4">
+                        <input type="email" placeholder="Enter your email to get started" required>
+                        <button type="submit">Start Free Trial</button>
+                    </form>
+                </div>
+                
+                <div class="border border-gray-200 rounded-lg p-8 hover:shadow-lg transition duration-300 bg-white">
+                    <h3 class="text-xl font-bold mb-2">Premium</h3>
+                    <div class="text-4xl font-bold mb-6">Custom<span class="text-gray-500 text-lg font-normal"></span></div>
+                    
+                    <ul class="mb-8 space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-brand-orange mt-1 mr-2"></i>
+                            <span>5000 evaluations per month</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-brand-orange mt-1 mr-2"></i>
+                            <span>Slack-support</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-brand-orange mt-1 mr-2"></i>
+                            <span>Custom evaluation strategies</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-brand-orange mt-1 mr-2"></i>
+                            <span>10+ seats</span>
+                        </li>
+                    </ul>
+                    
+                    <a href="#" class="signup-toggle block text-center py-3 px-4 bg-gradient-orange text-white rounded-lg hover:bg-opacity-90 transition duration-300" data-form="premium-signup-form">Talk To Us</a>
+                    
+                    <form id="premium-signup-form" class="signup-form mt-4">
+                        <input type="email" placeholder="Enter your email for custom pricing" required>
+                        <button type="submit">Talk To Us</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="mt-10 text-center">
+                <p class="text-gray-600">Need a custom plan for your enterprise?</p>
+                <a href="https://calendly.com/neha-suresh" class="text-brand-orange font-semibold hover:underline">Contact us for custom pricing</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section with enhanced gradient -->
+    <section class="py-16 relative overflow-hidden" id="signup">
+        <div class="absolute inset-0 bg-gradient-to-br from-orange-500 to-red-600 z-0"></div>
+        <div class="absolute inset-0 bg-gradient-to-tl from-transparent to-yellow-400 opacity-30 z-0"></div>
+        <div class="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-white to-transparent opacity-10 z-0"></div>
+        <div class="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-red-800 to-transparent opacity-20 z-0"></div>
+        
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-shadow">Ready to make your AI agents enterprise-ready?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Join 10+ companies already using NotHotDog to build more reliable AI agents.</p>
+            <a href="#" class="signup-toggle inline-block px-8 py-4 bg-white text-brand-orange font-bold rounded-lg hover:bg-opacity-90 transition duration-300 transform hover:-translate-y-1 hover:shadow-xl" data-form="cta-signup-form">Get Started Now</a>
+            
+            <form id="cta-signup-form" class="signup-form mt-6 max-w-md mx-auto">
+                <input type="email" placeholder="Enter your email to get started" required>
+                <button type="submit">Get Started Now</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Frequently Asked Questions</h2>
+            
+            <div class="max-w-3xl mx-auto space-y-6">
+                <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition">
+                    <h3 class="text-lg font-semibold mb-3">What kinds of AI agents can I test with NotHotDog?</h3>
+                    <p class="text-gray-600">NotHotDog works with both text-based and voice-based AI agents. Whether you're building customer support bots, sales agents, or any conversational AI, our platform can test them thoroughly.</p>
+                </div>
+                
+                <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition">
+                    <h3 class="text-lg font-semibold mb-3">How does the 14-day free trial work?</h3>
+                    <p class="text-gray-600">Sign up today to get immediate access to all features for 14 days. No credit card required. If you decide NotHotDog is right for you, you can choose a plan that fits your needs at the end of your trial.</p>
+                </div>
+                
+                <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition">
+                    <h3 class="text-lg font-semibold mb-3">What is an "evaluation" in your pricing?</h3>
+                    <p class="text-gray-600">An evaluation is a complete test of your AI agent using one of our personas with a specific scenario. Each plan includes a set number of evaluations per month, with the ability to add more as needed.</p>
+                </div>
+                
+                <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition">
+                    <h3 class="text-lg font-semibold mb-3">How can I create custom scenarios?</h3>
+                    <p class="text-gray-600">NotHotDog allows you to create custom test scenarios using natural language. Simply describe the scenario you want to test, and our platform will generate the appropriate test cases.</p>
+                </div>
+                
+                <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition">
+                    <h3 class="text-lg font-semibold mb-3">Do you integrate with our existing tools?</h3>
+                    <p class="text-gray-600">Yes! NotHotDog integrates with popular development and testing tools, making it easy to add comprehensive agent testing to your existing workflows.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-footer text-white py-12" id="contact">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <img src="nothotdog.png" alt="NotHotDog Logo" class="w-8 h-8">
+                        <span class="text-xl font-bold text-brand-orange">NotHotDog</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">Making AI agents enterprise-ready with comprehensive testing solutions.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Product</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#how-it-works" class="text-gray-400 hover:text-white transition">How it Works</a></li>
+                        <li><a href="#features" class="text-gray-400 hover:text-white transition">Features</a></li>
+                        <li><a href="#pricing" class="text-gray-400 hover:text-white transition">Pricing</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Documentation</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Press</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope text-brand-orange mt-1 mr-2"></i>
+                            <span class="text-gray-400">founders@nothotdog.dev</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone text-brand-orange mt-1 mr-2"></i>
+                            <span class="text-gray-400">(408) 823-0370</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-globe text-brand-orange mt-1 mr-2"></i>
+                            <span class="text-gray-400">www.nothotdog.dev</span>
+                        </li>
+                        <li class="flex items-start mt-4">
+                            <a href="https://calendly.com/neha-suresh" class="bg-gradient-orange text-white px-4 py-2 rounded hover:bg-opacity-90 transition duration-300 flex items-center">
+                                <i class="far fa-calendar-check mr-2"></i> Schedule a Call
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400">© 2025 NotHotDog. All rights reserved.</p>
+                <div class="mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white transition mr-6">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
