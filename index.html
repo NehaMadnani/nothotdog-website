@@ -741,7 +741,7 @@
         }
         
         .dark-mode .signup-form {
-            background: rgba(26, 29, 37, 0.8);
+            background: rgba(26, 29, 37, 0.8);        
         }
         
         .dark-mode .signup-form::before {
@@ -762,6 +762,23 @@
         
         .dark-mode .signup-form button {
             background: linear-gradient(135deg, #FF5722 0%, #B71C1C 100%);
+        }
+
+        /* Backed By section in dark mode */
+        .dark-mode .py-12.bg-white {
+            background-color: #1E1E1E;
+        }
+
+        .dark-mode .bg-white.p-4.rounded-lg.shadow-md {
+            background-color: #252525;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            border: 1px solid #333;
+        }
+
+        .dark-mode .bg-white.p-4.rounded-lg.shadow-md:hover {
+            box-shadow: 0 8px 16px rgba(233, 99, 47, 0.2);
+            border-color: rgba(233, 99, 47, 0.3);
+            transform: translateY(-5px);
         }
     </style>
         
@@ -1276,6 +1293,38 @@
         </div>
     </section>
 
+     <!-- Backed By Section -->
+     <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">Backed By</h2>
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+                <!-- CMU Swartz Center for Entrepreneurship -->
+                <div class="flex flex-col items-center">
+                    <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition duration-300 mb-4 w-48 h-32 flex items-center justify-center">
+                        <img src="swartz-center.png" alt="CMU Swartz Center for Entrepreneurship" class="max-w-full max-h-full object-contain" />
+                    </div>
+                    <span class="text-sm font-medium text-center">CMU Swartz Center for Entrepreneurship</span>
+                </div>
+                
+                <!-- CMU Venture Bridge -->
+                <div class="flex flex-col items-center">
+                    <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition duration-300 mb-4 w-48 h-32 flex items-center justify-center">
+                        <img src="venture-bridge.png" alt="CMU Venture Bridge" class="max-w-full max-h-full object-contain" />
+                    </div>
+                    <span class="text-sm font-medium text-center">CMU Venture Bridge</span>
+                </div>
+                
+                <!-- Berkeley SkyDeck -->
+                <div class="flex flex-col items-center">
+                    <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition duration-300 mb-4 w-48 h-32 flex items-center justify-center">
+                        <img src="skydeck.png" alt="Berkeley SkyDeck" class="max-w-full max-h-full object-contain" />
+                    </div>
+                    <span class="text-sm font-medium text-center">Berkeley SkyDeck</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- CTA Section with enhanced gradient -->
     <section class="py-16 relative overflow-hidden" id="signup">
         <div class="absolute inset-0 bg-gradient-to-br from-orange-500 to-red-600 z-0"></div>
@@ -1340,9 +1389,8 @@
                     </div>
                     <p class="text-gray-400 mb-6">Making AI agents enterprise-ready with comprehensive testing solutions.</p>
                     <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/company/nothotdog/" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/AgentEvaluation/NotHotDog" class="text-gray-400 hover:text-white transition"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
                 
