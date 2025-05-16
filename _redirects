@@ -1,0 +1,2 @@
+# Redirect apex domain to www subdomain
+https://nothotdog.dev/* https://www.nothotdog.dev/:splat 301!

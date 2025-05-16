@@ -1,0 +1,10 @@
+{
+  "name": "nothotdog-website",
+  "version": "1.0.0",
+  "description": "NotHotDog - AI Agent Testing Tool",
+  "scripts": {
+    "build": "echo 'No build required'"
+  },
+  "author": "",
+  "license": "ISC"
+}
