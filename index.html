@@ -98,7 +98,6 @@
             max-width: 50px;
         }
         .hero-image {
-            height: 110%;
             border: 2px solid #e9632e;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
@@ -780,6 +779,63 @@
             border-color: rgba(233, 99, 47, 0.3);
             transform: translateY(-5px);
         }
+
+        /* Media Queries */
+            @media (max-width: 768px) {
+            /* Make navbar stack items vertically on mobile */
+            nav .container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            /* Add some spacing between stacked elements */
+            nav .flex {
+                margin-bottom: 1rem;
+            }
+            
+            /* Make the logo section properly aligned */
+            nav .flex.items-center.space-x-2 {
+                margin-bottom: 1rem;
+            }
+            
+            /* Adjust the navigation links for mobile */
+            nav .hidden.md\:flex {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                margin: 0.5rem 0;
+            }
+            
+            /* Space navigation links vertically instead of horizontally */
+            nav .hidden.md\:flex a {
+                margin: 0.5rem 0;
+                width: 100%;
+                text-align: center;
+            }
+            
+            /* Make action buttons full width on mobile */
+            nav .flex.space-x-4 {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            nav .flex.space-x-4 a {
+                width: 100%;
+                margin: 0.25rem 0;
+                text-align: center;
+            }
+            
+            /* Remove horizontal spacing that causes issues */
+            nav .space-x-8 > *, nav .space-x-4 > * {
+                margin-left: 0 !important;
+            }
+            #nav-links {
+                display: none;
+            }
+        }
+
+            
     </style>
         
     <!-- Structured Data for SEO -->
@@ -922,7 +978,7 @@
                 <img src="nothotdog.png" alt="NotHotDog Logo" class="hotdog-icon">
                 <span class="text-2xl font-bold text-brand-orange">NotHotDog</span>
             </div>
-            <div class="hidden md:flex space-x-8">
+            <div class="hidden md:flex space-x-8" id="nav-links">
                 <a href="#how-it-works" class="hover:text-brand-orange">How It Works</a>
                 <a href="#features" class="hover:text-brand-orange">Features</a>
                 <a href="#pricing" class="hover:text-brand-orange">Pricing</a>
