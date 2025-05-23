@@ -30,1475 +30,1761 @@
         gtag('config', 'G-FFX2S4LYL2');
     </script>
     <!-- End Google Tag Manager -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Modern Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
-        .bg-brand-orange {
-            background-color: #E9632F;
-        }
-        .text-brand-orange {
-            color: #E9632F;
-        }
-        .border-brand-orange {
-            border-color: #E9632F;
-        }
-        .bg-light-orange {
-            background-color: #FFF0E8;
-        }
-        /* Exciting gradient backgrounds */
-        .bg-gradient-orange {
-            background: linear-gradient(135deg, #FF5722 0%, #FF9800 100%);
-            box-shadow: 0 4px 15px rgba(255, 87, 34, 0.3);
-        }
-        .bg-gradient-light {
-            background: linear-gradient(135deg, #FFF0E8 0%, #FFF8E1 100%);
-            position: relative;
-            overflow: hidden;
-        }
-        .bg-gradient-light::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at top right, rgba(255, 152, 0, 0.1), transparent 70%);
-            pointer-events: none;
-        }
-        .bg-gradient-dark {
-            background: linear-gradient(135deg, #333 0%, #555 100%);
-            position: relative;
-        }
-        .bg-gradient-dark::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at bottom left, rgba(233, 99, 47, 0.2), transparent 70%);
-            pointer-events: none;
-        }
-        .bg-gradient-footer {
-            background: linear-gradient(135deg, #2D3748 0%, #1A202C 100%);
-            position: relative;
-            overflow: hidden;
-        }
-        .bg-gradient-footer::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at top right, rgba(255, 87, 34, 0.15), transparent 60%);
-            pointer-events: none;
-        }
-        .hotdog-icon {
-            max-width: 50px;
-        }
-        .hero-image {
-            border: 2px solid #e9632e;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-        }
-        
-        .hero-image:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(233, 99, 47, 0.25);
-        }
-        
-        .bg-gradient {
-            background: linear-gradient(135deg, #FFF0E8 0%, #FFF 100%);
-        }
-        
-        .feature-card {
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-        }
-        
-        .feature-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(255, 152, 0, 0.05) 0%, rgba(255, 87, 34, 0.05) 100%);
-            z-index: -1;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(233, 99, 47, 0.15);
-            border-color: rgba(233, 99, 47, 0.3);
-        }
-        
-        .feature-card:hover::before {
-            background: linear-gradient(135deg, rgba(255, 152, 0, 0.1) 0%, rgba(255, 87, 34, 0.1) 100%);
-        }
-        
-        .testimoni-bubble {
-            position: relative;
-        }
-        .testimoni-bubble:after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 30px;
-            border-width: 15px 15px 0;
-            border-style: solid;
-            border-color: #FFF0E8 transparent;
-        }
-        /* Structured data for SEO */
-        .schema-data {
-            display: none;
-        }
-        
-        /* Text shadow for better readability on gradients */
-        .text-shadow {
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        }
-        
-        /* Animated gradient text */
-        .gradient-text {
-            background: linear-gradient(90deg, #FF5722, #FF9800, #E9632F, #FF5722);
-            background-size: 300% 100%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: gradientMove 6s ease infinite;
-        }
-        
-        @keyframes gradientMove {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        
-        /* Fancy hover effects for buttons */
-        .btn-hover-effect {
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-        }
-        
-        .btn-hover-effect::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to top, rgba(255, 255, 255, 0.2), transparent);
-            transform: translateY(100%);
-            transition: transform 0.3s ease;
-            z-index: -1;
-        }
-        
-        .btn-hover-effect:hover::after {
-            transform: translateY(0);
-        }
-        
-        /* Dark mode styles - enhanced with more vibrant effects */
-        .dark-mode {
-            background-color: #0F1116;
-            color: #f5f5f5;
-        }
-        .dark-mode .bg-white {
-            background-color: #1A1D25;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-        }
-        .dark-mode .text-gray-800 {
-            color: #f5f5f5;
-        }
-        .dark-mode .text-gray-600, 
-        .dark-mode .text-gray-500 {
-            color: #aaaaaa;
-        }
-        .dark-mode .bg-gray-50 {
-            background-color: #1E212A;
-        }
-        .dark-mode .bg-light-orange {
-            background-color: rgba(0, 174, 239, 0.15);
-        }
-        .dark-mode .border-gray-200 {
-            border-color: #2A2E3A;
-        }
-        .dark-mode .bg-gradient {
-            background: linear-gradient(135deg, rgba(0, 174, 239, 0.15) 0%, #0F1116 100%);
-        }
-        .dark-mode .shadow-sm,
-        .dark-mode .shadow-lg {
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-        }
-        .dark-mode .testimoni-bubble:after {
-            border-color: rgba(0, 174, 239, 0.15) transparent;
-        }
-        /* Enhanced dark mode styles with vibrant gradients */
-        .dark-mode .bg-gradient-orange {
-            background: linear-gradient(135deg, #00AEEF 0%, #0063B0 100%);
-            box-shadow: 0 4px 15px rgba(0, 174, 239, 0.3);
-        }
-        .dark-mode .bg-gradient-light {
-            background: linear-gradient(135deg, rgba(0, 174, 239, 0.15) 0%, rgba(0, 99, 176, 0.05) 100%);
-            position: relative;
-        }
-        .dark-mode .bg-gradient-light::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at top right, rgba(0, 174, 239, 0.2), transparent 70%);
-            pointer-events: none;
-        }
-        .dark-mode .bg-gradient-dark {
-            background: linear-gradient(135deg, #151820 0%, #1E212A 100%);
-            position: relative;
-        }
-        .dark-mode .bg-gradient-dark::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at bottom left, rgba(0, 174, 239, 0.2), transparent 70%);
-            pointer-events: none;
-        }
-        .dark-mode .bg-gradient-footer {
-            background: linear-gradient(135deg, #0A0C10 0%, #151820 100%);
-            position: relative;
-        }
-        .dark-mode .bg-gradient-footer::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at top right, rgba(0, 174, 239, 0.15), transparent 60%);
-            pointer-events: none;
-        }
-        .dark-mode input, .dark-mode button {
-            background-color: #1A1D25;
-            color: #f5f5f5;
-            border-color: #2A2E3A;
-        }
-        .dark-mode input::placeholder {
-            color: #888;
-        }
-        /* Card glow effects in dark mode */
-        .dark-mode .feature-card {
-            border: 1px solid rgba(0, 174, 239, 0.2);
-            background: rgba(26, 29, 37, 0.8);
-            transition: all 0.3s ease;
-        }
-        .dark-mode .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 174, 239, 0.2);
-            border-color: rgba(0, 174, 239, 0.4);
-        }
-        
-        /* Neon effect for dark mode */
-        .dark-mode .neon-effect {
-            box-shadow: 0 0 5px rgba(0, 174, 239, 0.5),
-                        0 0 15px rgba(0, 174, 239, 0.3),
-                        0 0 30px rgba(0, 174, 239, 0.2);
-        }
-        
-        .dark-mode .hero-image {
-            border-color: #00AEEF;
-            box-shadow: 0 0 15px rgba(0, 174, 239, 0.4);
-        }
-        
-        .dark-mode .hero-image:hover {
-            box-shadow: 0 0 20px rgba(0, 174, 239, 0.6),
-                        0 0 40px rgba(0, 174, 239, 0.3);
-        }
-        
-        /* Gradient text in dark mode */
-        .dark-mode .gradient-text {
-            background: linear-gradient(90deg, #00AEEF, #0063B0, #00C2FF, #00AEEF);
-            background-size: 300% 100%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: gradientMove 6s ease infinite;
-        }
-        
-        /* Text color overrides for dark mode - keeping orange branding */
-        .dark-mode .text-brand-orange {
-            color: #FF5722;
-        }
-        
-        .dark-mode .border-brand-orange {
-            border-color: #FF5722;
-        }
-        
-        /* Improved readability styles for light mode */
-        .text-gray-600 {
-            color: #4B5563; /* Darker gray for better contrast */
-        }
-        
-        .text-gray-500 {
-            color: #374151; /* Darker gray for better contrast */
-        }
-        
-        p {
-            line-height: 1.7; /* Improved line height for better readability */
-            letter-spacing: 0.01em; /* Slight letter spacing for better readability */
-        }
-        
-        h1, h2, h3, h4, h5, h6 {
-            letter-spacing: -0.02em; /* Tighter letter spacing for headings */
-        }
-        
-        /* High contrast text for important elements */
-        .feature-card h3 {
-            color: #111827; /* Very dark gray for headings */
-        }
-        
-        .dark-mode .feature-card h3 {
-            color: #F9FAFB; /* Very light color for headings in dark mode */
-        }
-        
-        /* Improved form readability */
-        input, button {
-            font-size: 1rem; /* Standardized font size */
-        }
-        
-        input::placeholder {
-            color: #6B7280; /* Darker placeholder text */
-        }
-        
-        /* Contrast improvements for buttons */
-        .bg-brand-orange, .bg-gradient-orange {
-            color: white; /* Ensuring white text on orange backgrounds */
-            font-weight: 500; /* Slightly bolder text */
-        }
-        .feature-card {
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-        }
-        
-        .feature-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(255, 152, 0, 0.05) 0%, rgba(255, 87, 34, 0.05) 100%);
-            z-index: -1;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(233, 99, 47, 0.15);
-            border-color: rgba(233, 99, 47, 0.3);
-        }
-        
-        .feature-card:hover::before {
-            background: linear-gradient(135deg, rgba(255, 152, 0, 0.1) 0%, rgba(255, 87, 34, 0.1) 100%);
-        }
-        .testimoni-bubble {
-            position: relative;
-        }
-        .testimoni-bubble:after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 30px;
-            border-width: 15px 15px 0;
-            border-style: solid;
-            border-color: #FFF0E8 transparent;
-        }
-        /* Structured data for SEO */
-        .schema-data {
-            display: none;
-        }
-            /* Dark mode styles - enhanced with black-orange-white gradients */
-        .dark-mode {
-            background-color: #121212;
-            color: #f5f5f5;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        .dark-mode .bg-white {
-            background-color: #1E1E1E;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        /* Dark theme variables */
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #111111;
+            --bg-tertiary: #1a1a1a;
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0a0;
+            --text-tertiary: #6b6b6b;
+            --accent-primary: #ff5e00;
+            --accent-secondary: #ff7a2d;
+            --border-color: #2a2a2a;
+            --gradient-primary: linear-gradient(135deg, #ff5e00 0%, #ff7a2d 100%);
+            --gradient-dark: linear-gradient(180deg, #0a0a0a 0%, #111111 100%);
         }
 
-        .dark-mode .text-gray-800 {
-            color: #f5f5f5;
+        /* Light theme variables */
+        body.light-mode {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8f9fa;
+            --bg-tertiary: #ffffff;
+            --text-primary: #0a0a0a;
+            --text-secondary: #4a5568;
+            --text-tertiary: #718096;
+            --accent-primary: #ff5e00;
+            --accent-secondary: #ff7a2d;
+            --border-color: #e2e8f0;
+            --gradient-primary: linear-gradient(135deg, #ff5e00 0%, #ff7a2d 100%);
+            --gradient-dark: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
         }
 
-        .dark-mode .text-gray-600, 
-        .dark-mode .text-gray-500 {
-            color: #aaaaaa;
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
-        .dark-mode .bg-gray-50 {
-            background-color: #1E1E1E;
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
         }
 
-        .dark-mode .bg-light-orange {
-            background-color: rgba(233, 99, 47, 0.15);
-        }
-
-        .dark-mode .border-gray-200 {
-            border-color: #2A2A2A;
-        }
-
-        /* Improved gradient backgrounds for dark mode */
-        .dark-mode .bg-gradient {
-            background: linear-gradient(135deg, rgba(233, 99, 47, 0.2) 0%, #121212 100%);
-        }
-
-        .dark-mode .bg-gradient-orange {
-            background: linear-gradient(135deg, #FF5722 0%, #B71C1C 100%);
-            box-shadow: 0 4px 15px rgba(255, 87, 34, 0.3);
-        }
-
-        .dark-mode .bg-gradient-light {
-            background: linear-gradient(135deg, #1A1A1A 0%, #121212 100%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .dark-mode .bg-gradient-light::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at top right, rgba(255, 87, 34, 0.2), transparent 70%);
-            pointer-events: none;
-        }
-
-        .dark-mode .bg-gradient-dark {
-            background: linear-gradient(135deg, #151515 0%, #1A1A1A 100%);
-            position: relative;
-        }
-
-        .dark-mode .bg-gradient-dark::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at bottom left, rgba(255, 87, 34, 0.2), transparent 70%);
-            pointer-events: none;
-        }
-
-        .dark-mode .bg-gradient-footer {
-            background: linear-gradient(135deg, #0F0F0F 0%, #1A1A1A 100%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .dark-mode .bg-gradient-footer::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at top right, rgba(255, 87, 34, 0.15), transparent 60%);
-            pointer-events: none;
-        }
-
-/* Form and input styling for dark mode */
-        .dark-mode input, .dark-mode button {
-            background-color: #252525;
-            color: #f5f5f5;
-            border-color: #333333;
-        }
-
-        .dark-mode input::placeholder {
-            color: #888888;
-        }
-
-        /* Card styling for dark mode with orange accents */
-        .dark-mode .feature-card {
-            border: 1px solid rgba(233, 99, 47, 0.2);
-            background: rgba(30, 30, 30, 0.8);
-            transition: all 0.3s ease;
-        }
-
-        .dark-mode .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(233, 99, 47, 0.2);
-            border-color: rgba(233, 99, 47, 0.4);
-        }
-
-        .dark-mode .feature-card::before {
-            background: linear-gradient(135deg, rgba(255, 87, 34, 0.05) 0%, rgba(0, 0, 0, 0.1) 100%);
-        }
-
-        .dark-mode .feature-card:hover::before {
-            background: linear-gradient(135deg, rgba(255, 87, 34, 0.1) 0%, rgba(0, 0, 0, 0.05) 100%);
-        }
-
-        /* Glow effects for dark mode */
-        .dark-mode .glow-effect {
-            box-shadow: 0 0 10px rgba(255, 87, 34, 0.3),
-                        0 0 20px rgba(255, 87, 34, 0.2),
-                        0 0 30px rgba(255, 87, 34, 0.1);
-        }
-
-        .dark-mode .hero-image {
-            border-color: #E9632F;
-            box-shadow: 0 0 15px rgba(233, 99, 47, 0.4);
-        }
-
-        .dark-mode .hero-image:hover {
-            box-shadow: 0 0 20px rgba(233, 99, 47, 0.6),
-                        0 0 40px rgba(233, 99, 47, 0.3);
-        }
-
-        /* Gradient text in dark mode */
-        .dark-mode .gradient-text {
-            background: linear-gradient(90deg, #FF5722, #FF9800, #E9632F, #FF5722);
-            background-size: 300% 100%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: gradientMove 6s ease infinite;
-        }
-
-        /* Signup form in dark mode */
-        .dark-mode .signup-form {
-            background: rgba(30, 30, 30, 0.9);
-        }
-
-        .dark-mode .signup-form::before {
-            border: 1px solid rgba(233, 99, 47, 0.3);
-            box-shadow: 0 8px 20px rgba(233, 99, 47, 0.1);
-        }
-
-        .dark-mode .signup-form input {
-            background-color: rgba(40, 40, 40, 0.9);
-            color: #f5f5f5;
-            border-color: rgba(233, 99, 47, 0.5);
-        }
-
-        .dark-mode .signup-form input:focus {
-            border-color: #FF5722;
-            box-shadow: 0 0 0 2px rgba(233, 99, 47, 0.3);
-        }
-
-        .dark-mode .signup-form button {
-            background: linear-gradient(135deg, #FF5722 0%, #B71C1C 100%);
-        }
-
-        /* CTA section improved gradients for dark mode */
-        .dark-mode .cta-section .absolute:first-child {
-            background: linear-gradient(135deg, #1A1A1A 0%, #0F0F0F 100%);
-        }
-
-        .dark-mode .cta-section .absolute:nth-child(2) {
-            background: radial-gradient(circle at top right, rgba(255, 87, 34, 0.4), transparent 70%);
-        }
-
-        .dark-mode .testimoni-bubble:after {
-            border-color: rgba(233, 99, 47, 0.15) transparent;
-        }
-
-        /* Improved dark mode toggle button */
-        .dark-mode .mode-toggle {
-            background: rgba(30, 30, 30, 0.7);
-            box-shadow: 0 2px 10px rgba(233, 99, 47, 0.2);
-        }
-
-        /* Add subtle texture to dark mode backgrounds */
-        .dark-mode .texture-overlay {
-            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23e9632f' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0.5;
-            pointer-events: none;
-            z-index: -1;
-        }
-        /* Toggle button styles */
-        .mode-toggle {
+        /* Navigation */
+        nav {
             position: fixed;
-            top: 20px;
-            right: 20px;
+            top: 0;
+            width: 100%;
+            background: var(--bg-primary);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             z-index: 1000;
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(5px);
+            border-bottom: 1px solid var(--border-color);
+            transition: background-color 0.3s ease;
+        }
+
+        body.light-mode nav {
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-container img {
+            width: 32px;
+            height: 32px;
+        }
+
+        .logo-text {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        /* Theme toggle button */
+        .theme-toggle {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+            margin-left: 16px;
+        }
+
+        .theme-toggle:hover {
+            background: var(--accent-primary);
+            border-color: var(--accent-primary);
+        }
+
+        .theme-toggle svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--text-secondary);
+            transition: fill 0.2s;
+        }
+
+        .theme-toggle:hover svg {
+            fill: white;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s;
+            cursor: pointer;
             border: none;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: white !important;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(255, 94, 0, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            background: var(--bg-tertiary);
+            border-color: var(--text-tertiary);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 160px 0 100px;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(255, 94, 0, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 6px 16px;
+            background: rgba(255, 94, 0, 0.1);
+            border: 1px solid rgba(255, 94, 0, 0.2);
+            border-radius: 100px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--accent-primary);
+            margin-bottom: 24px;
+        }
+
+        h1 {
+            font-size: 72px;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            letter-spacing: -2px;
+            background: linear-gradient(180deg, var(--text-primary) 0%, var(--text-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 20px;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 40px;
+            line-height: 1.6;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            margin-bottom: 16px;
+        }
+
+        .hero-note {
+            font-size: 14px;
+            color: var(--text-tertiary);
+            margin-bottom: 80px;
+        }
+
+        /* Product Screenshot */
+        .screenshot-container {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .screenshot {
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--border-color);
+        }
+
+        body.light-mode .screenshot {
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Featured Section */
+        .featured-section {
+            padding: 100px 0;
+            background: var(--bg-secondary);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .featured-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -25%;
+            width: 50%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 94, 0, 0.05) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 1024px) {
+            .featured-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .featured-item {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 32px 24px;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .featured-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--gradient-primary);
+            transform: translateX(-100%);
+            transition: transform 0.3s;
+        }
+
+        .featured-item:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent-primary);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        body.light-mode .featured-item:hover {
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .featured-item:hover::before {
+            transform: translateX(0);
+        }
+
+        .featured-icon {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, rgba(255, 94, 0, 0.1) 0%, rgba(255, 94, 0, 0.05) 100%);
+            border-radius: 14px;
             display: flex;
             align-items: center;
             justify-content: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        .dark-mode .mode-toggle {
-            background: rgba(0, 0, 0, 0.3);
-        }
-        
-        /* Sign up form styles with improved aesthetics */
-        .signup-form {
-            display: none;
-            margin-top: 1rem;
-            width: inherit;
+            margin-bottom: 20px;
             position: relative;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 1rem;
-            border-radius: 0.5rem;
-            backdrop-filter: blur(5px);
-            animation: formAppear 0.3s ease-out;
         }
-        
-        @keyframes formAppear {
+
+        .featured-icon svg {
+            width: 28px;
+            height: 28px;
+            stroke: var(--accent-primary);
+            stroke-width: 1.5;
+            fill: none;
+        }
+
+        .featured-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .featured-desc {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        /* Why Choose Section */
+        .why-choose {
+            padding: 120px 0;
+            background: var(--bg-primary);
+            position: relative;
+        }
+
+        .why-choose::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: radial-gradient(circle at 1px 1px, var(--border-color) 1px, transparent 1px);
+            background-size: 40px 40px;
+            opacity: 0.3;
+            pointer-events: none;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 32px;
+            margin-top: 80px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .why-card {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 48px 40px;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .why-card::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: var(--gradient-primary);
+            border-radius: 20px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: -1;
+        }
+
+        .why-card:hover {
+            transform: translateY(-8px);
+            border-color: transparent;
+        }
+
+        .why-card:hover::before {
+            opacity: 1;
+        }
+
+        /* Completely fix text visibility by using proper layering */
+        .why-card {
+            isolation: isolate;
+            position: relative;
+        }
+
+        .why-card::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: var(--gradient-primary);
+            border-radius: 20px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 0;
+        }
+
+        .why-card > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .why-card:hover::before {
+            opacity: 0.1;
+        }
+
+        /* Ensure all text elements have high contrast */
+        .why-card .why-number {
+            color: var(--accent-primary) !important;
+        }
+
+        .why-card .why-title {
+            color: var(--text-primary) !important;
+        }
+
+        .why-card .why-description,
+        .why-card .why-features li {
+            color: var(--text-secondary) !important;
+        }
+
+        body.light-mode .why-card {
+            background: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+        }
+
+        body.light-mode .why-card:hover {
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .why-metric {
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+            margin-bottom: 24px;
+        }
+
+        .why-number {
+            font-size: 64px;
+            font-weight: 800;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+        }
+
+        .why-suffix {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+
+        .why-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+
+        .why-description {
+            color: var(--text-secondary);
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
+
+        .why-features {
+            list-style: none;
+        }
+
+        .why-features li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 8px 0;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .why-features svg {
+            width: 16px;
+            height: 16px;
+            stroke: var(--accent-primary);
+            flex-shrink: 0;
+        }
+
+        /* Capabilities List */
+        .capabilities-list {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            margin-top: 32px;
+            flex-wrap: wrap;
+        }
+
+        .capability-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 24px;
+            background: rgba(255, 94, 0, 0.1);
+            border: 1px solid rgba(255, 94, 0, 0.2);
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-primary);
+            transition: all 0.3s;
+        }
+
+        .capability-item:hover {
+            background: rgba(255, 94, 0, 0.15);
+            border-color: var(--accent-primary);
+            transform: translateY(-2px);
+        }
+
+        .capability-item svg {
+            width: 20px;
+            height: 20px;
+            stroke: var(--accent-primary);
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 768px) {
+            .capabilities-list {
+                gap: 16px;
+                margin-top: 24px;
+            }
+            
+            .capability-item {
+                padding: 10px 16px;
+                font-size: 13px;
+            }
+            
+            .capability-item svg {
+                width: 18px;
+                height: 18px;
+            }
+        }
+
+        /* Features Grid */
+        .features {
+            padding: 100px 0;
+            background: var(--bg-secondary);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-title {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 32px;
+        }
+
+        .feature-card {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 32px;
+            transition: all 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent-primary);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        body.light-mode .feature-card:hover {
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(255, 94, 0, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            font-size: 24px;
+        }
+
+        .feature-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .feature-description {
+            color: var(--text-secondary);
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            padding: 100px 0;
+            background: var(--bg-primary);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .pricing-card {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 40px 32px;
+            position: relative;
+            transition: all 0.3s;
+        }
+
+        .pricing-card.featured {
+            border-color: var(--accent-primary);
+            transform: scale(1.05);
+        }
+
+        .pricing-card.featured::before {
+            content: 'MOST POPULAR';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gradient-primary);
+            padding: 4px 16px;
+            border-radius: 100px;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            color: white;
+        }
+
+        .pricing-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .pricing-price {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .pricing-period {
+            color: var(--text-secondary);
+            font-size: 16px;
+            margin-bottom: 32px;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 32px;
+        }
+
+        .pricing-features li {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+
+        .check-icon {
+            color: var(--accent-primary);
+            font-size: 16px;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 120px 0;
+            background: var(--bg-secondary);
+            position: relative;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-grid {
+            display: grid;
+            gap: 16px;
+        }
+
+        .faq-item {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+
+        body.light-mode .faq-item {
+            background: white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+
+        .faq-item:hover {
+            border-color: var(--accent-primary);
+        }
+
+        .faq-item.active {
+            border-color: var(--accent-primary);
+            box-shadow: 0 8px 24px rgba(255, 94, 0, 0.1);
+        }
+
+        .faq-question {
+            padding: 28px 32px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 24px;
+            transition: all 0.3s;
+        }
+
+        .faq-question:hover {
+            padding-left: 36px;
+        }
+
+        .faq-question-text {
+            font-weight: 600;
+            font-size: 17px;
+            color: var(--text-primary);
+            flex: 1;
+        }
+
+        .faq-arrow {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--bg-secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            flex-shrink: 0;
+        }
+
+        .faq-arrow svg {
+            width: 14px;
+            height: 14px;
+            stroke: var(--text-secondary);
+            stroke-width: 2;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-arrow {
+            background: var(--accent-primary);
+        }
+
+        .faq-item.active .faq-arrow svg {
+            stroke: white;
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .faq-answer-content {
+            padding: 0 32px 32px;
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .faq-answer-content strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .faq-answer-content ul {
+            margin-top: 16px;
+            padding-left: 20px;
+        }
+
+        .faq-answer-content li {
+            margin-bottom: 8px;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 600px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg-secondary);
+            padding: 80px 0 40px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 80px;
+            margin-bottom: 60px;
+        }
+
+        .footer-brand h3 {
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+
+        .footer-brand p {
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+
+        .footer-links h4 {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .footer-bottom {
+            padding-top: 40px;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+            color: var(--text-tertiary);
+        }
+
+        /* Optimized Animations */
+        @keyframes fadeInUp {
             from {
                 opacity: 0;
-                transform: translateY(-10px);
+                transform: translateY(20px);
             }
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
-        
-        .signup-form::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            border-radius: 0.5rem;
-            border: 1px solid rgba(233, 99, 47, 0.3);
-            box-shadow: 0 8px 20px rgba(233, 99, 47, 0.15);
-            pointer-events: none;
+
+        .animate-fade-in {
+            animation: fadeInUp 0.6s ease-out;
         }
-        
-        .signup-form input {
-            width: 100%;
-            padding: 0.75rem 1rem;
-            border: 1px solid #E9632F;
-            border-radius: 0.375rem;
-            margin-bottom: 0.75rem;
-            background-color: rgba(255, 255, 255, 0.9);
-            transition: all 0.3s ease;
+
+        /* Performance optimizations */
+        * {
+            will-change: auto;
         }
-        
-        .signup-form input:focus {
-            outline: none;
-            border-color: #FF5722;
-            box-shadow: 0 0 0 2px rgba(255, 87, 34, 0.2);
+
+        .feature-card,
+        .why-card,
+        .pricing-card,
+        .featured-item {
+            will-change: transform;
         }
-        
-        .signup-form button {
-            width: 100%;
-            padding: 0.75rem;
-            background: linear-gradient(135deg, #FF5722 0%, #FF9800 100%);
-            color: white;
-            border: none;
-            border-radius: 0.375rem;
-            cursor: pointer;
-            font-weight: 500;
-            transition: all 0.3s ease;
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            h1 {
+                font-size: 48px;
+            }
+
+            .hero-subtitle {
+                font-size: 18px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                width: 100%;
+                max-width: 300px;
+                margin: 0 auto 16px;
+            }
+
+            .featured-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+            }
+
+            .featured-item {
+                padding: 24px 16px;
+            }
+
+            .featured-desc {
+                display: none;
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 16px;
+                text-align: center;
+            }
+        }
+
+        /* Backed By Section */
+        .backed-by {
+            padding: 80px 0;
+            background: var(--bg-secondary);
+            text-align: center;
+        }
+
+        .backed-by h2 {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 48px;
+            color: var(--text-primary);
+        }
+
+        .logos-container {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.05) 100%);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 32px 48px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 800px;
+            margin: 0 auto;
             position: relative;
             overflow: hidden;
         }
-        
-        .signup-form button::after {
+
+        .logos-container::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.2) 100%);
-            opacity: 0;
-            transition: opacity 0.3s ease;
+            background: linear-gradient(90deg, transparent 0%, rgba(255, 94, 0, 0.02) 50%, transparent 100%);
+            pointer-events: none;
         }
-        
-        .signup-form button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(255, 87, 34, 0.3);
+
+        body.light-mode .logos-container {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.01) 0%, rgba(0, 0, 0, 0.02) 100%);
+            border-color: rgba(0, 0, 0, 0.08);
         }
-        
-        .signup-form button:hover::after {
+
+        .logo-item {
+            transition: all 0.3s;
+            padding: 12px;
+            border-radius: 8px;
+        }
+
+        .logo-item img {
+            object-fit: contain;
+            transition: all 0.3s;
+        }
+
+        .logo-center {
+            transform: scale(1.2);
+        }
+
+        .logo-center:hover {
+            transform: scale(1.2) translateY(-2px);
+        }
+
+        .logo-item img {
+            filter: none;
+            opacity: 0.7;
+            transition: all 0.3s;
+        }
+
+        .logo-item:hover {
+            transform: translateY(-3px);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .logo-item:hover img {
             opacity: 1;
         }
-        
-        .dark-mode .signup-form {
-            background: rgba(26, 29, 37, 0.8);        
-        }
-        
-        .dark-mode .signup-form::before {
-            border: 1px solid rgba(233, 99, 47, 0.3);
-            box-shadow: 0 8px 20px rgba(233, 99, 47, 0.1);
-        }
-        
-        .dark-mode .signup-form input {
-            background-color: rgba(30, 33, 42, 0.9);
-            color: #f5f5f5;
-            border-color: rgba(233, 99, 47, 0.5);
-        }
-        
-        .dark-mode .signup-form input:focus {
-            border-color: #FF5722;
-            box-shadow: 0 0 0 2px rgba(233, 99, 47, 0.3);
-        }
-        
-        .dark-mode .signup-form button {
-            background: linear-gradient(135deg, #FF5722 0%, #B71C1C 100%);
+
+        body.light-mode .logo-item:hover {
+            background: rgba(0, 0, 0, 0.02);
         }
 
-        /* Backed By section in dark mode */
-        .dark-mode .py-12.bg-white {
-            background-color: #1E1E1E;
-        }
-
-        .dark-mode .bg-white.p-4.rounded-lg.shadow-md {
-            background-color: #252525;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            border: 1px solid #333;
-        }
-
-        .dark-mode .bg-white.p-4.rounded-lg.shadow-md:hover {
-            box-shadow: 0 8px 16px rgba(233, 99, 47, 0.2);
-            border-color: rgba(233, 99, 47, 0.3);
-            transform: translateY(-5px);
-        }
-
-        /* Media Queries */
-            @media (max-width: 768px) {
-            /* Make navbar stack items vertically on mobile */
-            nav .container {
+        @media (max-width: 768px) {
+            .logos-container {
+                padding: 24px 32px;
                 flex-direction: column;
-                align-items: center;
+                gap: 24px;
             }
             
-            /* Add some spacing between stacked elements */
-            nav .flex {
-                margin-bottom: 1rem;
+            .logo-item img {
+                height: 32px !important;
             }
             
-            /* Make the logo section properly aligned */
-            nav .flex.items-center.space-x-2 {
-                margin-bottom: 1rem;
-            }
-            
-            /* Adjust the navigation links for mobile */
-            nav .hidden.md\:flex {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                width: 100%;
-                margin: 0.5rem 0;
-            }
-            
-            /* Space navigation links vertically instead of horizontally */
-            nav .hidden.md\:flex a {
-                margin: 0.5rem 0;
-                width: 100%;
-                text-align: center;
-            }
-            
-            /* Make action buttons full width on mobile */
-            nav .flex.space-x-4 {
-                flex-direction: column;
-                width: 100%;
-            }
-            
-            nav .flex.space-x-4 a {
-                width: 100%;
-                margin: 0.25rem 0;
-                text-align: center;
-            }
-            
-            /* Remove horizontal spacing that causes issues */
-            nav .space-x-8 > *, nav .space-x-4 > * {
-                margin-left: 0 !important;
-            }
-            #nav-links {
-                display: none;
+            .logo-center {
+                transform: scale(1.1);
             }
         }
-
-            
     </style>
-        
-    <!-- Structured Data for SEO -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "NotHotDog",
-      "description": "AI Agent Testing Tool for chatbots and voice bots. Free trial available.",
-      "applicationCategory": "Testing Tool",
-      "operatingSystem": "Web",
-      "offers": {
-        "@type": "Offer",
-        "price": "5",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "ratingCount": "22"
-      }
-    }
-    </script>
-        
-    <script>
-    // Theme toggle functionality without localStorage
-    document.addEventListener('DOMContentLoaded', function() {
-        // Add theme toggle button
-        const toggleButton = document.createElement('button');
-        toggleButton.className = 'mode-toggle';
-        toggleButton.innerHTML = '<i class="fas fa-moon text-gray-700"></i>';
-        document.body.appendChild(toggleButton);
-        
-        // Toggle theme on button click
-        toggleButton.addEventListener('click', function() {
-            document.body.classList.toggle('dark-mode');
-            const isDark = document.body.classList.contains('dark-mode');
-            this.innerHTML = isDark ? 
-                '<i class="fas fa-sun text-yellow-400"></i>' : 
-                '<i class="fas fa-moon text-gray-700"></i>';
-        });
-        
-        // Toggle signup form visibility
-        const toggleSignupForm = function(formId) {
-            const form = document.getElementById(formId);
-            if (form) {
-                if (form.style.display === 'block') {
-                    form.style.display = 'none';
-                } else {
-                    form.style.display = 'block';
-                }
-            }
-        };
-        
-        // Find all signup buttons and attach click handlers
-        const signupButtons = document.querySelectorAll('.signup-toggle');
-        signupButtons.forEach(button => {
-            button.addEventListener('click', function(e) {
-                e.preventDefault();
-                const formId = this.getAttribute('data-form');
-                toggleSignupForm(formId);
-            });
-        });
-        
-        // Handle form submissions
-        const submitForms = document.querySelectorAll('.signup-form');
-        submitForms.forEach(form => {
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
-                const email = this.querySelector('input[type="email"]').value;
-                if (!email || !email.includes('@')) {
-                    alert('Please enter a valid email address');
-                    return;
-                }
-                
-                const googleFormURL = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSd-Ap9oxoIjCMRJE3kKHa4RCmAWeJeVqQOG8-AQkYKFSc3egg/formResponse";
-                const formParams = new URLSearchParams({
-                    "entry.1433578333": email,
-                });
-                
-                fetch(googleFormURL, {
-                    method: "POST",
-                    mode: "no-cors",
-                    headers: {
-                        "Content-Type": "application/x-www-form-urlencoded",
-                    },
-                    body: formParams.toString(),
-                })
-                .then(() => {
-                    alert("Thank you! We'll be in touch shortly.");
-                    this.reset();
-                    this.style.display = 'none';
-                })
-                .catch(() => {
-                    alert("An error occurred. Please try again.");
-                });
-            });
-        });
-        
-        // Legacy window.submitToGoogleForms function for backward compatibility
-        window.submitToGoogleForms = function(email) {
-            if (!email || !email.includes('@')) {
-                alert('Please enter a valid email address');
-                return false;
-            }
-            
-            const googleFormURL = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSd-Ap9oxoIjCMRJE3kKHa4RCmAWeJeVqQOG8-AQkYKFSc3egg/formResponse";
-            const formParams = new URLSearchParams({
-                "entry.1433578333": email,
-            });
-            
-            fetch(googleFormURL, {
-                method: "POST",
-                mode: "no-cors",
-                headers: {
-                    "Content-Type": "application/x-www-form-urlencoded",
-                },
-                body: formParams.toString(),
-            })
-            .then(() => {
-                alert("Thank you! We'll be in touch shortly.");
-                return true;
-            })
-            .catch(() => {
-                alert("An error occurred. Please try again.");
-                return false;
-            });
-            
-            return true;
-        };
-    });
-    </script>
 </head>
-<body class="font-sans antialiased text-gray-800">
-    <!-- Navbar -->
-    <nav class="bg-white shadow-sm py-4">
-        <div class="container mx-auto px-4 flex justify-between items-center">
-            <div class="flex items-center space-x-2">
-                <img src="nothotdog.png" alt="NotHotDog Logo" class="hotdog-icon">
-                <span class="text-2xl font-bold text-brand-orange">NotHotDog</span>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="nav-container">
+                <div class="logo-container">
+                    <img src="nothotdog.png" alt="NotHotDog Logo">
+                    <span class="logo-text">NotHotDog</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#featured">Solutions</a>
+                    <a href="#why-choose">Why NotHotDog</a>
+                    <a href="#features">Features</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#faq">FAQ</a>
+                    <a href="https://github.com/AgentEvaluation/NotHotDog">GitHub</a>
+                    <a href="https://calendly.com/neha-suresh" class="btn btn-secondary">Book Demo</a>
+                    <a href="#" class="btn btn-primary">Start Free Trial</a>
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                        <svg class="sun-icon" viewBox="0 0 24 24" style="display: none;">
+                            <path d="M12 17.5C14.76 17.5 17 15.26 17 12.5C17 9.74 14.76 7.5 12 7.5C9.24 7.5 7 9.74 7 12.5C7 15.26 9.24 17.5 12 17.5ZM12 0.5V5.5M12 18.5V23.5M4.22 4.72L7.76 8.26M16.24 15.74L19.78 19.28M0 12.5H5M19 12.5H24M4.22 20.28L7.76 16.74M16.24 8.26L19.78 4.72"/>
+                        </svg>
+                        <svg class="moon-icon" viewBox="0 0 24 24">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                        </svg>
+                    </button>
+                </div>
             </div>
-            <div class="hidden md:flex space-x-8" id="nav-links">
-                <a href="#how-it-works" class="hover:text-brand-orange">How It Works</a>
-                <a href="#features" class="hover:text-brand-orange">Features</a>
-                <a href="#pricing" class="hover:text-brand-orange">Pricing</a>
-                <a href="#customers" class="hover:text-brand-orange">Customers</a>
-            </div>
-            <div class="flex space-x-4">
-                <a href="https://calendly.com/neha-suresh" class="px-4 py-2 border border-brand-orange text-brand-orange rounded hover:bg-brand-orange hover:text-white transition duration-300">Contact Us</a>
-                <a href="#" class="signup-toggle px-4 py-2 bg-gradient-orange text-white rounded hover:bg-opacity-90 transition duration-300" data-form="nav-signup-form">Start Free Trial</a>
-            </div>
-        </div>
-        <!-- Navigation Bar Signup Form -->
-        <div class="container mx-auto px-4 mt-2">
-            <form id="nav-signup-form" class="signup-form">
-                <input type="email" placeholder="Enter your email to get started" required>
-                <button type="submit">Start Free Trial</button>
-            </form>
         </div>
     </nav>
 
-    <!-- Hero Section with enhanced visuals -->
-    <section class="bg-gradient-light py-16 md:py-24 relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-full h-full opacity-20 pointer-events-none">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="badge animate-fade-in">Now with Voice Bot Testing</div>
+            <h1 class="animate-fade-in">Test Your AI Agents<br>Before They Test Your Users</h1>
+            <p class="hero-subtitle animate-fade-in">
+                NotHotDog generates comprehensive test scenarios and runs experiments on your AI agents. Ship faster with confidence.
+            </p>
+            <div class="hero-buttons animate-fade-in">
+                <a href="#" class="btn btn-primary">
+                    Start 14-Day Free Trial
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M3 8H13M13 8L8 3M13 8L8 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+                <a href="https://docsend.com/view/fa3i8mipzr9fq566" class="btn btn-secondary">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="2"/>
+                        <path d="M6 5L11 8L6 11V5Z" fill="currentColor"/>
+                    </svg>
+                    Watch Demo
+                </a>
+            </div>
+            <p class="hero-note animate-fade-in">No credit card required • 14-day free trial</p>
+            <div class="screenshot-container animate-fade-in">
+                <img src="screenshot.png" alt="NotHotDog Platform Screenshot" class="screenshot">
+            </div>
         </div>
-        
-        <div class="absolute bottom-0 left-0 w-full h-full opacity-10 pointer-events-none">
-            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
-                <path fill="#FF9800" d="M47.7,-73.2C60.8,-66.3,70.2,-51.5,74.1,-36.4C78,-21.2,76.3,-5.9,72.4,7.5C68.4,20.8,62.3,32.2,53.6,42.6C44.9,53,33.7,62.6,20.4,67.9C7.1,73.3,-8.2,74.4,-22,70.8C-35.9,67.1,-48.3,58.6,-57.9,47.4C-67.5,36.2,-74.3,22.2,-77.8,6.8C-81.3,-8.7,-81.5,-25.8,-74.8,-39.9C-68.1,-54,-54.3,-65.2,-39.9,-70.6C-25.4,-76,-12.7,-75.6,1.8,-78.7C16.3,-81.7,34.5,-80.1,47.7,-73.2Z" transform="translate(100 100)" />
-            </svg>
-        </div>
-        
-        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center relative z-10">
-            <div class="md:w-1/2 mb-8 md:mb-0">
-                <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-                    <span class="bg-clip-text bg-gradient-to-r from-orange-500 to-red-600">AI Agent Testing</span> Made Simple
-                </h1>
-                <p class="text-xl mb-8 text-gray-600">
-                    NotHotDog generates comprehensive suite of scenarios, and helps you run experiments on your agents in no time. Ship fast with confidence!
+    </section>
 
+    <!-- Featured Section -->
+    <section class="featured-section" id="featured">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Built for Every AI Use Case</h2>
+                <p class="section-subtitle">Comprehensive testing for all types of conversational AI agents</p>
+            </div>
+            <div class="featured-grid">
+                <div class="featured-item">
+                    <div class="featured-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                            <path d="M8 10h.01M12 10h.01M16 10h.01" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3 class="featured-title">Customer Support</h3>
+                    <p class="featured-desc">Test response accuracy, escalation handling, and resolution rates</p>
+                </div>
+                <div class="featured-item">
+                    <div class="featured-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M19 10h-1a1 1 0 0 1-1-1V5a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v4a1 1 0 0 1-1 1H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-6a2 2 0 0 0-2-2z" />
+                            <path d="M12 11v9M8 8V4M16 8V4" />
+                        </svg>
+                    </div>
+                    <h3 class="featured-title">Voice Assistants</h3>
+                    <p class="featured-desc">Validate speech recognition, intent matching, and accent handling</p>
+                </div>
+                <div class="featured-item">
+                    <div class="featured-icon">
+                        <svg viewBox="0 0 24 24">
+                            <rect x="3" y="3" width="18" height="18" rx="2" />
+                            <path d="M9 9h6M9 15h6M9 12h6" />
+                        </svg>
+                    </div>
+                    <h3 class="featured-title">Sales Automation</h3>
+                    <p class="featured-desc">Measure lead qualification, objection handling, and conversion paths</p>
+                </div>
+                <div class="featured-item">
+                    <div class="featured-icon">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M1 21v-2a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v2" />
+                            <circle cx="19" cy="7" r="4" />
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                        </svg>
+                    </div>
+                    <h3 class="featured-title">HR & Recruiting</h3>
+                    <p class="featured-desc">Test screening consistency, bias detection, and candidate experience</p>
+                </div>
+                <div class="featured-item">
+                    <div class="featured-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                        </svg>
+                    </div>
+                    <h3 class="featured-title">Multi-Agent Systems</h3>
+                    <p class="featured-desc">Test agent coordination, handoffs, and complex workflows</p>
+                </div>
+                <div class="featured-item">
+                    <div class="featured-icon">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                        </svg>
+                    </div>
+                    <h3 class="featured-title">Multilingual Bots</h3>
+                    <p class="featured-desc">Ensure consistent performance across languages and cultures</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section class="why-choose" id="why-choose">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Enterprise-Grade AI Testing Made Simple</h2>
+                <p class="section-subtitle">
+                    Transform how you validate and ship conversational AI systems
                 </p>
-                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                    <a href="#" class="signup-toggle px-6 py-3 bg-gradient-orange text-white font-medium rounded-lg text-center hover:bg-opacity-90 transition duration-300 relative overflow-hidden group" data-form="hero-signup-form">
-                        <span class="relative z-10">Start 14-Day Free Trial</span>
-                        <span class="absolute inset-0 bg-gradient-to-r from-yellow-400 to-orange-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                    </a>
-                    <a href="https://docsend.com/view/fa3i8mipzr9fq566" class="px-6 py-3 border border-brand-orange text-brand-orange font-medium rounded-lg flex items-center justify-center hover:bg-light-orange transition duration-300 relative overflow-hidden group">
-                        <span class="absolute inset-0 bg-gradient-to-r from-orange-100 to-orange-200 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                        <i class="fas fa-play-circle mr-2 relative z-10"></i>
-                        <span class="relative z-10">Watch Demo</span>
-                    </a>
-                </div>
-                <!-- Hero Signup Form -->
-                <form id="hero-signup-form" class="signup-form mt-4">
-                    <input type="email" placeholder="Enter your email to get started" required>
-                    <button type="submit">Start Free Trial</button>
-                </form>
-                <p class="mt-4 text-sm text-gray-500">No credit card required. 30-day money back guarantee.</p>
             </div>
-            <div class="md:w-1/2 flex justify-center">
-                <div class="relative">
-                    <div class="absolute -inset-0.5 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-lg blur opacity-50"></div>
-                    <img src="screenshot.png" alt="AI Agent Testing Platform" class="hero-image rounded-lg shadow-lg relative">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Featured For Section -->
-    <section class="py-12 bg-gradient-light">
-        <div class="container mx-auto px-4">
-            <h2 class="text-2xl font-bold text-center mb-8">Featured AI Agent Testing Tool For</h2>
-            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
-                <!-- Chatbot Testing -->
-                <div class="flex flex-col items-center">
-                    <div class="bg-light-orange p-3 rounded-full mb-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-brand-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
-                        </svg>
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-metric">
+                        <div class="why-number">20</div>
+                        <div class="why-suffix">+</div>
                     </div>
-                    <span class="text-sm font-medium">Chatbot Testing</span>
+                    <h3 class="why-title">Create Your Own Personas</h3>
+                    <p class="why-description">
+                        Design custom user personas that match your real users. Configure personality traits, communication styles, and behavior patterns for realistic testing.
+                    </p>
+                    <ul class="why-features">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Frustrated customers
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Technical experts
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Non-native speakers
+                        </li>
+                    </ul>
                 </div>
-                
-                <!-- Voice Bot Testing -->
-                <div class="flex flex-col items-center">
-                    <div class="bg-light-orange p-3 rounded-full mb-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-brand-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
-                        </svg>
+                <div class="why-card">
+                    <div class="why-metric">
+                        <div class="why-number">50</div>
+                        <div class="why-suffix">+</div>
                     </div>
-                    <span class="text-sm font-medium">Voice Bot Testing</span>
+                    <h3 class="why-title">Parallel Test Execution</h3>
+                    <p class="why-description">
+                        Run dozens of test conversations simultaneously. Get comprehensive validation results in minutes, not hours.
+                    </p>
+                    <ul class="why-features">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Real-time performance metrics
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Hallucination detection
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Custom validation rules
+                        </li>
+                    </ul>
                 </div>
-                
-                <!-- Customer Support AI -->
-                <div class="flex flex-col items-center">
-                    <div class="bg-light-orange p-3 rounded-full mb-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-brand-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
-                        </svg>
+                <div class="why-card">
+                    <div class="why-metric">
+                        <div class="why-number">100</div>
+                        <div class="why-suffix">%</div>
                     </div>
-                    <span class="text-sm font-medium">Customer Support AI</span>
-                </div>
-                
-                <!-- Sales AI Agents -->
-                <div class="flex flex-col items-center">
-                    <div class="bg-light-orange p-3 rounded-full mb-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-brand-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                        </svg>
-                    </div>
-                    <span class="text-sm font-medium">Sales AI Agents</span>
-                </div>
-                
-                <!-- Multilingual Bots -->
-                <div class="flex flex-col items-center">
-                    <div class="bg-light-orange p-3 rounded-full mb-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-brand-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
-                        </svg>
-                    </div>
-                    <span class="text-sm font-medium">Multilingual Bots</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Problem Statement -->
-    <section class="py-16 bg-white" id="how-it-works">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Why AI Agents Are Not Enterprise-Ready</h2>
-            <div class="grid md:grid-cols-3 gap-10">
-                <div class="bg-gradient-light p-8 rounded-lg hover:shadow-lg transition duration-300">
-                    <div class="text-brand-orange text-3xl font-bold mb-4">90%</div>
-                    <h3 class="text-xl font-semibold mb-4">Manual Testing</h3>
-                    <p class="text-gray-600">Companies test complex AI agents with basic prompts, missing edge cases and critical failures.</p>
-                </div>
-                <div class="bg-gradient-light p-8 rounded-lg hover:shadow-lg transition duration-300">
-                    <div class="text-brand-orange text-3xl font-bold mb-4">Limited</div>
-                    <h3 class="text-xl font-semibold mb-4">Evaluation Methods</h3>
-                    <p class="text-gray-600">No systematic way to evaluate agent behavior or simulate real user interactions at scale.</p>
-                </div>
-                <div class="bg-gradient-light p-8 rounded-lg hover:shadow-lg transition duration-300">
-                    <div class="text-brand-orange text-3xl font-bold mb-4">Unknown</div>
-                    <h3 class="text-xl font-semibold mb-4">Compliance & Security Risks</h3>
-                    <p class="text-gray-600">Edge cases are discovered only after deployment, leading to customer frustration and potential liability.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works -->
-    <section class="py-16 bg-gradient-light">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Why Choose NotHotDog</h2>
-            <p class="text-center text-gray-600 mb-16 max-w-2xl mx-auto">Our AI agent testing tool makes comprehensive testing simple and scalable for both chatbots and voice bots.</p>
-            
-            <div class="grid md:grid-cols-3 gap-16">
-                <div class="text-center">
-                    <div class="w-20 h-20 mx-auto mb-6 bg-gradient-orange rounded-full flex items-center justify-center relative overflow-hidden">
-                        <div class="absolute inset-0 bg-gradient-to-br from-orange-500 to-red-600 opacity-90"></div>
-                        <div class="absolute inset-0 bg-gradient-to-tl from-transparent to-yellow-400 opacity-40"></div>
-                        <i class="fas fa-users text-white text-2xl relative z-10"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">1. Test Voice & Chat Bots</h3>
-                    <p class="text-gray-600">Our free AI testing tool works with both text-based chatbots and voice-based agents to ensure comprehensive coverage.</p>
-                </div>
-                <div class="text-center">
-                    <div class="w-20 h-20 mx-auto mb-6 bg-gradient-orange rounded-full flex items-center justify-center relative overflow-hidden">
-                        <div class="absolute inset-0 bg-gradient-to-br from-orange-500 to-red-600 opacity-90"></div>
-                        <div class="absolute inset-0 bg-gradient-to-tl from-transparent to-yellow-400 opacity-40"></div>
-                        <i class="fas fa-sitemap text-white text-2xl relative z-10"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">2. Run 100+ Parallel Scenarios</h3>
-                    <p class="text-gray-600">Test with hundreds of unique scenarios in parallel conversations, discovering edge cases before deployment.</p>
-                </div>
-                <div class="text-center">
-                    <div class="w-20 h-20 mx-auto mb-6 bg-gradient-orange rounded-full flex items-center justify-center relative overflow-hidden">
-                        <div class="absolute inset-0 bg-gradient-to-br from-orange-500 to-red-600 opacity-90"></div>
-                        <div class="absolute inset-0 bg-gradient-to-tl from-transparent to-yellow-400 opacity-40"></div>
-                        <i class="fas fa-chart-line text-white text-2xl relative z-10"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">3. Get Actionable Metrics</h3>
-                    <p class="text-gray-600">Track agent performance with metrics like response time, accuracy, and failure rates to guide improvements.</p>
+                    <h3 class="why-title">Create Your Own Metrics</h3>
+                    <p class="why-description">
+                        Define custom success criteria and validation rules that matter to your business. Track performance against your specific KPIs.
+                    </p>
+                    <ul class="why-features">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Custom validation rules
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            JSON path expressions
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Business KPI tracking
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-16 bg-white" id="features">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Key Features</h2>
-            <p class="text-center text-gray-600 mb-16 max-w-2xl mx-auto">Everything you need to make your AI agents enterprise-ready.</p>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="feature-card p-6 border border-gray-200 rounded-lg">
-                    <div class="w-12 h-12 mb-4 bg-gradient-light rounded-lg flex items-center justify-center">
-                        <i class="fas fa-bolt text-brand-orange"></i>
-                    </div>
-                    <h3 class="text-lg font-semibold mb-2">3X Faster Releases</h3>
-                    <ul class="text-gray-600 space-y-2">
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-brand-orange mt-1 mr-2"></i>
-                            <span>Quick one-time setup</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-brand-orange mt-1 mr-2"></i>
-                            <span>Automated testing with every update</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-brand-orange mt-1 mr-2"></i>
-                            <span>Works with both text and audio based agents</span>
-                        </li>
-                    </ul>
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Everything You Need to Test AI Agents</h2>
+                <p class="section-subtitle">
+                    Comprehensive testing for chatbots and voice bots. Find edge cases before your users do.
+                </p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3 class="feature-title">Automated Test Generation</h3>
+                    <p class="feature-description">
+                        AI-powered test scenario generation creates hundreds of realistic user interactions, edge cases, and failure modes automatically.
+                    </p>
                 </div>
-                
-                <div class="feature-card p-6 border border-gray-200 rounded-lg">
-                    <div class="w-12 h-12 mb-4 bg-gradient-light rounded-lg flex items-center justify-center">
-                        <i class="fas fa-shield-alt text-brand-orange"></i>
-                    </div>
-                    <h3 class="text-lg font-semibold mb-2">80% Higher Reliability</h3>
-                    <ul class="text-gray-600 space-y-2">
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-brand-orange mt-1 mr-2"></i>
-                            <span>Test with 20+ diverse personas</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-brand-orange mt-1 mr-2"></i>
-                            <span>Test with 100+ scenarios in parallel</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-brand-orange mt-1 mr-2"></i>
-                            <span>Create custom scenarios in natural language</span>
-                        </li>
-                    </ul>
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3 class="feature-title">Parallel Testing at Scale</h3>
+                    <p class="feature-description">
+                        Run 100+ test scenarios simultaneously. Test months of user interactions in minutes, not hours.
+                    </p>
                 </div>
-                
-                <div class="feature-card p-6 border border-gray-200 rounded-lg">
-                    <div class="w-12 h-12 mb-4 bg-gradient-light rounded-lg flex items-center justify-center">
-                        <i class="fas fa-chart-bar text-brand-orange"></i>
-                    </div>
-                    <h3 class="text-lg font-semibold mb-2">Comprehensive Metrics</h3>
-                    <ul class="text-gray-600 space-y-2">
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-brand-orange mt-1 mr-2"></i>
-                            <span>Instant issue detection</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-brand-orange mt-1 mr-2"></i>
-                            <span>Real-time performance tracking</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-brand-orange mt-1 mr-2"></i>
-                            <span>Custom success metrics for your agents</span>
-                        </li>
-                    </ul>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3 class="feature-title">Real-Time Analytics</h3>
+                    <p class="feature-description">
+                        Track success rates, response times, and failure patterns. Get actionable insights to improve agent performance.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎭</div>
+                    <h3 class="feature-title">20+ Test Personas</h3>
+                    <p class="feature-description">
+                        Test with diverse user personas - from tech-savvy early adopters to frustrated customers and edge case scenarios.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔊</div>
+                    <h3 class="feature-title">Voice & Text Support</h3>
+                    <p class="feature-description">
+                        Test both chatbots and voice assistants. Support for multiple languages and accents out of the box.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔌</div>
+                    <h3 class="feature-title">Easy Integration</h3>
+                    <p class="feature-description">
+                        Connect your agents in minutes. Works with all major platforms and custom implementations.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Pricing Section -->
-    <section class="py-16 bg-gradient-light" id="pricing">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Simple, Transparent Pricing</h2>
-            <p class="text-center text-gray-600 mb-16 max-w-2xl mx-auto">Start with a 14-day free trial. No credit card required. 30-day money-back guarantee.</p>
-            
-            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                <div class="border border-gray-200 rounded-lg p-8 hover:shadow-lg transition duration-300 bg-white">
-                    <h3 class="text-xl font-bold mb-2">Individual</h3>
-                    <div class="text-4xl font-bold mb-6">$0<span class="text-gray-500 text-lg font-normal">/month</span></div>
-                    
-                    <ul class="mb-8 space-y-4">
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-brand-orange mt-1 mr-2"></i>
-                            <span>Bring your own tokens</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-brand-orange mt-1 mr-2"></i>
-                            <span>200 evaluations per month</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-brand-orange mt-1 mr-2"></i>
-                            <span>1 seat</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span><br/></span>
-                        </li>
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Simple, Transparent Pricing</h2>
+                <p class="section-subtitle">
+                    Start with a 14-day free trial. No credit card required.
+                </p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3 class="pricing-title">Individual</h3>
+                    <div class="pricing-price">$0</div>
+                    <div class="pricing-period">per month</div>
+                    <ul class="pricing-features">
+                        <li><span class="check-icon">✓</span> Bring your own tokens</li>
+                        <li><span class="check-icon">✓</span> 200 evaluations/month</li>
+                        <li><span class="check-icon">✓</span> 1 seat</li>
+                        <li><span class="check-icon">✓</span> Community support</li>
                     </ul>
-                    
-                    <a href="#" class="signup-toggle block text-center py-3 px-4 bg-gradient-orange text-white rounded-lg hover:bg-opacity-90 transition duration-300" data-form="individual-signup-form">Start Free Trial</a>
-                    
-                    <form id="individual-signup-form" class="signup-form mt-4">
-                        <input type="email" placeholder="Enter your email to get started" required>
-                        <button type="submit">Start Free Trial</button>
-                    </form>
+                    <a href="#" class="btn btn-secondary" style="width: 100%;">Get Started</a>
                 </div>
-                
-                <div class="border-2 border-brand-orange rounded-lg p-8 shadow-lg relative bg-white">
-                    <div class="absolute top-0 right-0 bg-gradient-orange text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">MOST POPULAR</div>
-                    <h3 class="text-xl font-bold mb-2">Standard</h3>
-                    <div class="text-4xl font-bold mb-6">$249<span class="text-gray-500 text-lg font-normal">/month</span></div>
-                    
-                    <ul class="mb-8 space-y-4">
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-brand-orange mt-1 mr-2"></i>
-                            <span>Includes AI tokens</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-brand-orange mt-1 mr-2"></i>
-                            <span>5000 evaluations per month</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-brand-orange mt-1 mr-2"></i>
-                            <span>Multiple Personas</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-brand-orange mt-1 mr-2"></i>
-                            <span>5 seats</span>
-                        </li>
+                <div class="pricing-card featured">
+                    <h3 class="pricing-title">Standard</h3>
+                    <div class="pricing-price">$249</div>
+                    <div class="pricing-period">per month</div>
+                    <ul class="pricing-features">
+                        <li><span class="check-icon">✓</span> Includes AI tokens</li>
+                        <li><span class="check-icon">✓</span> 5,000 evaluations/month</li>
+                        <li><span class="check-icon">✓</span> 5 seats</li>
+                        <li><span class="check-icon">✓</span> Multiple personas</li>
+                        <li><span class="check-icon">✓</span> Priority support</li>
                     </ul>
-                    
-                    <a href="#" class="signup-toggle block text-center py-3 px-4 bg-gradient-orange text-white rounded-lg hover:bg-opacity-90 transition duration-300" data-form="standard-signup-form">Start Free Trial</a>
-                    
-                    <form id="standard-signup-form" class="signup-form mt-4">
-                        <input type="email" placeholder="Enter your email to get started" required>
-                        <button type="submit">Start Free Trial</button>
-                    </form>
+                    <a href="#" class="btn btn-primary" style="width: 100%;">Start Free Trial</a>
                 </div>
-                
-                <div class="border border-gray-200 rounded-lg p-8 hover:shadow-lg transition duration-300 bg-white">
-                    <h3 class="text-xl font-bold mb-2">Premium</h3>
-                    <div class="text-4xl font-bold mb-6">Custom<span class="text-gray-500 text-lg font-normal"></span></div>
-                    
-                    <ul class="mb-8 space-y-4">
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-brand-orange mt-1 mr-2"></i>
-                            <span>10000 evaluations per month</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-brand-orange mt-1 mr-2"></i>
-                            <span>Slack-support</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-brand-orange mt-1 mr-2"></i>
-                            <span>Custom evaluation strategies</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-brand-orange mt-1 mr-2"></i>
-                            <span>10+ seats</span>
-                        </li>
+                <div class="pricing-card">
+                    <h3 class="pricing-title">Premium</h3>
+                    <div class="pricing-price">Custom</div>
+                    <div class="pricing-period">contact us</div>
+                    <ul class="pricing-features">
+                        <li><span class="check-icon">✓</span> 10,000+ evaluations/month</li>
+                        <li><span class="check-icon">✓</span> 10+ seats</li>
+                        <li><span class="check-icon">✓</span> Custom personas</li>
+                        <li><span class="check-icon">✓</span> Slack support</li>
+                        <li><span class="check-icon">✓</span> Custom integrations</li>
                     </ul>
-                    
-                    <a href="#" class="signup-toggle block text-center py-3 px-4 bg-gradient-orange text-white rounded-lg hover:bg-opacity-90 transition duration-300" data-form="premium-signup-form">Talk To Us</a>
-                    
-                    <form id="premium-signup-form" class="signup-form mt-4">
-                        <input type="email" placeholder="Enter your email for custom pricing" required>
-                        <button type="submit">Talk To Us</button>
-                    </form>
+                    <a href="https://calendly.com/neha-suresh" class="btn btn-secondary" style="width: 100%;">Contact Sales</a>
                 </div>
             </div>
-            
-            <div class="mt-10 text-center">
-                <p class="text-gray-600">Need a custom plan for your enterprise?</p>
-                <a href="https://calendly.com/neha-suresh" class="text-brand-orange font-semibold hover:underline">Contact us for custom pricing</a>
-            </div>
-        </div>
-    </section>
-
-     <!-- Backed By Section -->
-     <section class="py-12 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">Backed By</h2>
-            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
-                <!-- CMU Swartz Center for Entrepreneurship -->
-                <div class="flex flex-col items-center">
-                    <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition duration-300 mb-4 w-48 h-32 flex items-center justify-center">
-                        <img src="swartz-center.png" alt="CMU Swartz Center for Entrepreneurship" class="max-w-full max-h-full object-contain" />
-                    </div>
-                    <span class="text-sm font-medium text-center">CMU Swartz Center for Entrepreneurship</span>
-                </div>
-                
-                <!-- CMU Venture Bridge -->
-                <div class="flex flex-col items-center">
-                    <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition duration-300 mb-4 w-48 h-32 flex items-center justify-center">
-                        <img src="venture-bridge.png" alt="CMU Venture Bridge" class="max-w-full max-h-full object-contain" />
-                    </div>
-                    <span class="text-sm font-medium text-center">CMU Venture Bridge</span>
-                </div>
-                
-                <!-- Berkeley SkyDeck -->
-                <div class="flex flex-col items-center">
-                    <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition duration-300 mb-4 w-48 h-32 flex items-center justify-center">
-                        <img src="skydeck.png" alt="Berkeley SkyDeck" class="max-w-full max-h-full object-contain" />
-                    </div>
-                    <span class="text-sm font-medium text-center">Berkeley SkyDeck</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section with enhanced gradient -->
-    <section class="py-16 relative overflow-hidden" id="signup">
-        <div class="absolute inset-0 bg-gradient-to-br from-orange-500 to-red-600 z-0"></div>
-        <div class="absolute inset-0 bg-gradient-to-tl from-transparent to-yellow-400 opacity-30 z-0"></div>
-        <div class="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-white to-transparent opacity-10 z-0"></div>
-        <div class="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-red-800 to-transparent opacity-20 z-0"></div>
-        
-        <div class="container mx-auto px-4 text-center relative z-10">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-shadow">Ready to make your AI agents enterprise-ready?</h2>
-            <p class="text-xl mb-8 max-w-3xl mx-auto">Join the companies already using NotHotDog to build more reliable AI agents.</p>
-            <a href="#" class="signup-toggle inline-block px-8 py-4 bg-white text-brand-orange font-bold rounded-lg hover:bg-opacity-90 transition duration-300 transform hover:-translate-y-1 hover:shadow-xl" data-form="cta-signup-form">Get Started Now</a>
-            
-            <form id="cta-signup-form" class="signup-form mt-6 max-w-md mx-auto">
-                <input type="email" placeholder="Enter your email to get started" required>
-                <button type="submit">Get Started Now</button>
-            </form>
         </div>
     </section>
 
     <!-- FAQ Section -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Frequently Asked Questions</h2>
-            
-            <div class="max-w-3xl mx-auto space-y-6">
-                <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition">
-                    <h3 class="text-lg font-semibold mb-3">What kinds of AI agents can I test with NotHotDog?</h3>
-                    <p class="text-gray-600">NotHotDog works with both text-based and voice-based AI agents. Whether you're building customer support bots, sales agents, or any conversational AI, our platform can test them thoroughly.</p>
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Everything you need to know about testing your AI agents</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span class="faq-question-text">How is NotHotDog different from manual testing?</span>
+                            <div class="faq-arrow">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path d="M6 9l6 6 6-6" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <strong>NotHotDog automates what would take weeks of manual testing into minutes.</strong> Instead of manually crafting test cases and conversations, our AI generates comprehensive test scenarios based on your agent's purpose. We simulate diverse user personas, edge cases, and adversarial inputs that humans might miss. Plus, you get consistent, reproducible results with detailed analytics on every test run.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span class="faq-question-text">What happens if my agent fails a test?</span>
+                            <div class="faq-arrow">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path d="M6 9l6 6 6-6" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                When your agent fails a test, NotHotDog provides <strong>detailed diagnostics</strong> to help you fix issues quickly:
+                                <ul>
+                                    <li>• Exact conversation transcript showing where the failure occurred</li>
+                                    <li>• Root cause analysis with suggested improvements</li>
+                                    <li>• Performance metrics comparison against benchmarks</li>
+                                    <li>• One-click test replay to verify fixes</li>
+                                </ul>
+                                Our goal is to help you improve, not just identify problems.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span class="faq-question-text">Can I create custom test scenarios?</span>
+                            <div class="faq-arrow">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path d="M6 9l6 6 6-6" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <strong>Absolutely!</strong> While NotHotDog automatically generates comprehensive test suites, you have full control to:
+                                <ul>
+                                    <li>• Create custom test scenarios using natural language</li>
+                                    <li>• Define specific user personas and behaviors</li>
+                                    <li>• Set custom evaluation criteria and success metrics</li>
+                                    <li>• Import real conversation data for regression testing</li>
+                                </ul>
+                                Mix automated and custom tests to ensure complete coverage.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span class="faq-question-text">How do you ensure test quality and relevance?</span>
+                            <div class="faq-arrow">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path d="M6 9l6 6 6-6" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                Our test generation is powered by <strong>advanced AI models trained on millions of real conversations</strong>. We continuously update our testing patterns based on:
+                                <ul>
+                                    <li>• Latest attack vectors and edge cases from the AI safety community</li>
+                                    <li>• Real-world failure patterns from production deployments</li>
+                                    <li>• Industry-specific compliance requirements</li>
+                                    <li>• Feedback from our community of developers</li>
+                                </ul>
+                                Every test is designed to be realistic, challenging, and relevant to your use case.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span class="faq-question-text">What integrations do you support?</span>
+                            <div class="faq-arrow">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path d="M6 9l6 6 6-6" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                NotHotDog integrates seamlessly with your existing workflow:
+                                <ul>
+                                    <li>• <strong>AI Platforms:</strong> OpenAI, Anthropic, Google AI, Cohere, Hugging Face</li>
+                                    <li>• <strong>Development:</strong> GitHub Actions, GitLab CI, Jenkins, CircleCI</li>
+                                    <li>• <strong>Monitoring:</strong> Datadog, New Relic, Prometheus, Grafana</li>
+                                    <li>• <strong>Communication:</strong> Slack, Discord, Microsoft Teams</li>
+                                </ul>
+                                Plus REST API and webhooks for custom integrations. New integrations added monthly!
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition">
-                    <h3 class="text-lg font-semibold mb-3">How does the 14-day free trial work?</h3>
-                    <p class="text-gray-600">Sign up today to get immediate access to all features for 14 days. No credit card required. If you decide NotHotDog is right for you, you can choose a plan that fits your needs at the end of your trial.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Backed By Section -->
+    <section class="backed-by">
+        <div class="container">
+            <h2>Backed By</h2>
+            <div class="logos-container">
+                <div class="logo-item">
+                    <img src="Cloudflare-Logo.png" alt="Cloudflare" style="height: 40px;">
                 </div>
-                
-                <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition">
-                    <h3 class="text-lg font-semibold mb-3">What is an "evaluation" in your pricing?</h3>
-                    <p class="text-gray-600">An evaluation is a complete test of your AI agent using one of our personas with a specific scenario. Each plan includes a set number of evaluations per month, with the ability to add more as needed.</p>
+                <div class="logo-item logo-center">
+                    <img src="skydeck.png" alt="Berkeley SkyDeck" style="height: 60px;">
                 </div>
-                
-                <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition">
-                    <h3 class="text-lg font-semibold mb-3">How can I create custom scenarios?</h3>
-                    <p class="text-gray-600">NotHotDog allows you to create custom test scenarios using natural language. Simply describe the scenario you want to test, and our platform will generate the appropriate test cases.</p>
-                </div>
-                
-                <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition">
-                    <h3 class="text-lg font-semibold mb-3">Do you integrate with our existing tools?</h3>
-                    <p class="text-gray-600">Yes! NotHotDog integrates with popular development and testing tools, making it easy to add comprehensive agent testing to your existing workflows.</p>
+                <div class="logo-item">
+                    <img src="venture-bridge.png" alt="CMU Venture Bridge" style="height: 40px;">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gradient-footer text-white py-12" id="contact">
-        <div class="container mx-auto px-4">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <div class="flex items-center space-x-2 mb-6">
-                        <img src="nothotdog.png" alt="NotHotDog Logo" class="w-8 h-8">
-                        <span class="text-xl font-bold text-brand-orange">NotHotDog</span>
-                    </div>
-                    <p class="text-gray-400 mb-6">Making AI agents enterprise-ready with comprehensive testing solutions.</p>
-                    <div class="flex space-x-4">
-                        <a href="https://www.linkedin.com/company/nothotdog/" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/AgentEvaluation/NotHotDog" class="text-gray-400 hover:text-white transition"><i class="fab fa-github"></i></a>
-                    </div>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>NotHotDog</h3>
+                    <p>Making AI agents enterprise-ready with comprehensive testing solutions. Test before you deploy.</p>
                 </div>
-                
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Product</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#how-it-works" class="text-gray-400 hover:text-white transition">How it Works</a></li>
-                        <li><a href="#features" class="text-gray-400 hover:text-white transition">Features</a></li>
-                        <li><a href="#pricing" class="text-gray-400 hover:text-white transition">Pricing</a></li>
-                        <!-- <li><a href="#" class="text-gray-400 hover:text-white transition">Documentation</a></li> -->
+                <div class="footer-links">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="https://github.com/AgentEvaluation/NotHotDog">GitHub</a></li>
                     </ul>
                 </div>
-                
-                <!-- <div>
-                    <h4 class="text-lg font-semibold mb-4">Company</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">About Us</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Careers</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Press</a></li>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Careers</a></li>
                     </ul>
-                </div> -->
-                
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
-                    <ul class="space-y-2">
-                        <li class="flex items-start">
-                            <i class="fas fa-envelope text-brand-orange mt-1 mr-2"></i>
-                            <span class="text-gray-400">founders@nothotdog.dev</span>
-                        </li>
-                        <!-- <li class="flex items-start">
-                            <i class="fas fa-phone text-brand-orange mt-1 mr-2"></i>
-                            <span class="text-gray-400">(408) 823-0370</span>
-                        </li> -->
-                        <li class="flex items-start">
-                            <i class="fas fa-globe text-brand-orange mt-1 mr-2"></i>
-                            <span class="text-gray-400">www.nothotdog.dev</span>
-                        </li>
-                        <li class="flex items-start mt-4">
-                            <a href="https://calendly.com/neha-suresh" class="bg-gradient-orange text-white px-4 py-2 rounded hover:bg-opacity-90 transition duration-300 flex items-center">
-                                <i class="far fa-calendar-check mr-2"></i> Schedule a Call
-                            </a>
-                        </li>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="mailto:founders@nothotdog.dev">Contact Us</a></li>
+                        <li><a href="https://www.linkedin.com/company/nothotdog/">LinkedIn</a></li>
+                        <li><a href="https://calendly.com/neha-suresh">Book Demo</a></li>
                     </ul>
                 </div>
             </div>
-            
-            <div class="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400">© 2025 NotHotDog. All rights reserved.</p>
-                <div class="mt-4 md:mt-0">
-                    <a href="#" class="text-gray-400 hover:text-white transition mr-6">Privacy Policy</a>
-                    <a href="#" class="text-gray-400 hover:text-white transition">Terms of Service</a>
+            <div class="footer-bottom">
+                <div>© 2025 NotHotDog. All rights reserved.</div>
+                <div>
+                    <a href="#" style="color: var(--text-tertiary); text-decoration: none; margin-right: 24px;">Privacy Policy</a>
+                    <a href="#" style="color: var(--text-tertiary); text-decoration: none;">Terms of Service</a>
                 </div>
             </div>
         </div>
     </footer>
+
+    <script>
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+        const sunIcon = themeToggle.querySelector('.sun-icon');
+        const moonIcon = themeToggle.querySelector('.moon-icon');
+
+        // Check for saved theme preference or default to dark mode
+        const currentTheme = localStorage.getItem('theme') || 'dark';
+        if (currentTheme === 'light') {
+            body.classList.add('light-mode');
+            sunIcon.style.display = 'block';
+            moonIcon.style.display = 'none';
+        }
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('light-mode');
+            const isLightMode = body.classList.contains('light-mode');
+            
+            if (isLightMode) {
+                sunIcon.style.display = 'block';
+                moonIcon.style.display = 'none';
+                localStorage.setItem('theme', 'light');
+            } else {
+                sunIcon.style.display = 'none';
+                moonIcon.style.display = 'block';
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+
+        // FAQ functionality
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                
+                // Close all other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                
+                // Toggle current item
+                item.classList.toggle('active');
+            });
+        });
+
+        // Add smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Handle form submissions
+        document.querySelectorAll('.btn-primary').forEach(btn => {
+            if (btn.textContent.includes('Start')) {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const email = prompt('Enter your email to start your free trial:');
+                    if (email && email.includes('@')) {
+                        // Submit to Google Forms
+                        const googleFormURL = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSd-Ap9oxoIjCMRJE3kKHa4RCmAWeJeVqQOG8-AQkYKFSc3egg/formResponse";
+                        const formData = new FormData();
+                        formData.append('entry.1433578333', email);
+                        
+                        fetch(googleFormURL, {
+                            method: 'POST',
+                            mode: 'no-cors',
+                            body: formData
+                        }).then(() => {
+                            alert('Thank you! We\'ll be in touch shortly.');
+                        });
+                    }
+                });
+            }
+        });
+
+        // Optimized scroll animations
+        const observerOptions = {
+            threshold: 0.15,
+            rootMargin: '0px 0px -30px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                    entry.target.style.willChange = 'auto';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements with reduced stagger
+        document.querySelectorAll('.feature-card, .why-card, .pricing-card, .faq-item, .featured-item').forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(15px)';
+            card.style.transition = `opacity 0.4s ease-out ${index * 0.05}s, transform 0.4s ease-out ${index * 0.05}s`;
+            observer.observe(card);
+        });
+    </script>
 </body>
 </html>
